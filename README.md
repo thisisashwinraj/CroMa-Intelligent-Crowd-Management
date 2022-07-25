@@ -1,1 +1,1 @@
-# CroMa-Crowd Management Software
+# CroMa - Crowd Management Software
