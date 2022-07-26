@@ -125,14 +125,14 @@ def updatePassengerCount():
 
 
 def createFirebaseRTDatabase():
-  firebaseConfig = {"apiKey": "AIzaSyCY6jTxpTWnGIS46sK1XnwilvceAuaeUKE",
+  firebaseConfig = {"apiKey": "<API_KEY_HERE>",
     "authDomain": "croma-ed592.firebaseapp.com",
     "projectId": "croma-ed592",
     "storageBucket": "croma-ed592.appspot.com",
     "messagingSenderId": "85756972861",
     "appId": "1:85756972861:web:bb73b935a71f90ee603f54",
     "measurementId": "G-ZXEDMDDFMT",
-    "databaseURL": "https://croma-ed592-default-rtdb.firebaseio.com/"}
+    "databaseURL": "<DB_URL_HERE>"}
 
 
   firebase = pyrebase.initialize_app(firebaseConfig)
@@ -144,14 +144,14 @@ def createFirebaseRTDatabase():
 
 
 def updateFirebaseRTDatabase_KL13N():
-  firebaseConfig = {"apiKey": "AIzaSyCY6jTxpTWnGIS46sK1XnwilvceAuaeUKE",
+  firebaseConfig = {"apiKey": "<API_KEY_HERE>",
     "authDomain": "croma-ed592.firebaseapp.com",
     "projectId": "croma-ed592",
     "storageBucket": "croma-ed592.appspot.com",
     "messagingSenderId": "85756972861",
     "appId": "1:85756972861:web:bb73b935a71f90ee603f54",
     "measurementId": "G-ZXEDMDDFMT",
-    "databaseURL": "https://croma-ed592-default-rtdb.firebaseio.com/"}
+    "databaseURL": "<DB_URL_HERE>"}
 
 
   firebase = pyrebase.initialize_app(firebaseConfig)
