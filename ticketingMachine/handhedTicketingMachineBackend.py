@@ -20,6 +20,8 @@ def selectBus():
 
 	busIdError = False
 
+	global busId
+
 	print("Enter the bus number:")
 	busId = str(input())
 
@@ -42,6 +44,7 @@ def selectBus():
 	else:
 		print("Uh-Oh! Could'nt find this bus. Try again!\n")
 		busIdError = True
+		
 		selectBus()
 
 	if busIdError == False:
@@ -50,7 +53,7 @@ def selectBus():
 
 		for i in range(len(selectedRoute)):
 			crowdManager.append(0)
-		#print(crowdManager)
+
 	passengersInBus()
 
 
@@ -69,13 +72,10 @@ def printTicket():
 
 	# Increment crowdmanager to include passengers who onbarded at the stop
 	crowdManager[userStartingPoint-1] += numberOfPassengers
+	
 	# Decrement crpwdmanager to remove the customers who are to deboard at the stop
 	crowdManager[userDestination-1] -= numberOfPassengers
-	'''
-	print("\n")
-	print(crowdManager)
-	print("\n")
-	'''
+	
 	global totalTicketsPrinted
 	totalTicketsPrinted = totalTicketsPrinted + numberOfPassengers
 
@@ -110,15 +110,10 @@ def tripDetails():
 
 
 def passengersInBus():
-	#currentPassengerCount = sum(crowdManager[:currentLocation])
+
 	updatePassengerCount()
 
 	print("Total Passengers in Bus: " + str(currentPassengerCount))
-
-	'''
-	global availableSeatCount
-	availableSeatCount = totalSeats - currentPassengerCount
-	'''
 
 
 def updatePassengerCount():
@@ -129,31 +124,40 @@ def updatePassengerCount():
 	availableSeatCount = totalSeats - currentPassengerCount
 
 
-def sendDataToFirebase():
-	firebaseConfig = {"apiKey": "AIzaSyCY6jTxpTWnGIS46sK1XnwilvceAuaeUKE",
-	  "authDomain": "croma-ed592.firebaseapp.com",
-	  "projectId": "croma-ed592",
-	  "storageBucket": "croma-ed592.appspot.com",
-	  "messagingSenderId": "85756972861",
-	  "appId": "1:85756972861:web:bb73b935a71f90ee603f54",
-	  "measurementId": "G-ZXEDMDDFMT",
-	  "databaseURL": "https://croma-ed592-default-rtdb.firebaseio.com/"}
+def createFirebaseRTDatabase():
+  firebaseConfig = {"apiKey": "AIzaSyCY6jTxpTWnGIS46sK1XnwilvceAuaeUKE",
+    "authDomain": "croma-ed592.firebaseapp.com",
+    "projectId": "croma-ed592",
+    "storageBucket": "croma-ed592.appspot.com",
+    "messagingSenderId": "85756972861",
+    "appId": "1:85756972861:web:bb73b935a71f90ee603f54",
+    "measurementId": "G-ZXEDMDDFMT",
+    "databaseURL": "https://croma-ed592-default-rtdb.firebaseio.com/"}
 
 
-	firebase = pyrebase.initialize_app(firebaseConfig)
-	db = firebase.database()
+  firebase = pyrebase.initialize_app(firebaseConfig)
+  db = firebase.database()
 
-	data = {"currentLocation": currentLocation, "passengersInBus" : currentPassengerCount, "availableSeat" : availableSeatCount}
-		
-	#db.push(data)
+  data = {"currentLocation": selectedRoute[currentLocation-1], "passengersInBus" : currentPassengerCount, "availableSeat" : availableSeatCount}
 
-	from datetime import datetime
+  db.child(busId).set(data)
 
-	now = datetime.now()
-	timestamp = int(datetime.timestamp(now))
 
-	db.child(timestamp).set(data)
+def updateFirebaseRTDatabase_KL13N():
+  firebaseConfig = {"apiKey": "AIzaSyCY6jTxpTWnGIS46sK1XnwilvceAuaeUKE",
+    "authDomain": "croma-ed592.firebaseapp.com",
+    "projectId": "croma-ed592",
+    "storageBucket": "croma-ed592.appspot.com",
+    "messagingSenderId": "85756972861",
+    "appId": "1:85756972861:web:bb73b935a71f90ee603f54",
+    "measurementId": "G-ZXEDMDDFMT",
+    "databaseURL": "https://croma-ed592-default-rtdb.firebaseio.com/"}
 
+
+  firebase = pyrebase.initialize_app(firebaseConfig)
+  db = firebase.database()
+
+  db.child(busId).update({"currentLocation": selectedRoute[currentLocation-1], "passengersInBus" : currentPassengerCount, "availableSeat" : availableSeatCount})
 
 
 if __name__ == "__main__":
@@ -163,19 +167,19 @@ if __name__ == "__main__":
 
 	print("\nWelcome to CroMa: The CROwd MAnagement software\n")
 
-	# Display all routes
+	# Select the BusId to configure the route and other properties 
 	selectBus()
+
+	# Create firebase real-time database with the busId as key
+	createFirebaseRTDatabase()
 
 	# Display MENU with conductor options
 	selectedMENUOption = 0
 
 	while(selectedMENUOption != 5):
 
-		#333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
-
-		#333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
-
-		sendDataToFirebase()
+		# Update the FireBase real-time database to reflect any changes
+		updateFirebaseRTDatabase_KL13N()
 
 		print("\nMENU: Select an option\n1. Print Ticket\n2. Display Trip Details\n3. Display Collections\n4. Update Location\n5. Exit")
 		selectedMENUOption = int(input())
@@ -183,21 +187,21 @@ if __name__ == "__main__":
 		# Print ticket for the customer
 		if selectedMENUOption == 1:
 			printTicket()
+
 		# Show Trip Details
 		if selectedMENUOption == 2:
 			tripDetails()
 
+		# Display total collections through ticket sale
 		if selectedMENUOption == 3:
 			print("Total Collections for this trip: " + str(collection))
 
+		# Change the current location of the bus
 		if selectedMENUOption == 4:
-			#selectedRouteBusStopsList = routeDictionary[selectedRoute]
-			# print(selectedRouteBusStopsList) #Shows list of stations in route
-
 			print("\nAt pesent, the current location is set to " + selectedRoute[currentLocation-1] + " (Code = " + str(currentLocation) + ")")
 
 			print("Enter the new current location: ")
-			currentLocation = int(input())
+			currentLocation = int(input())  # Input the location code 
 
 			print("The current location has been updated to " + selectedRoute[currentLocation-1])
 
