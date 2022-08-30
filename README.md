@@ -12,4 +12,4 @@ The project development started in April 2022 as a group project and has been li
 ### Files and SubDirectories
 • **Mobile Application:** This directory contains the Dart code, and related resources for building the mobile application
 <br>
-• **Ticketing Machine:** This directory contains the Python3 code for designing the handheld ticketing machine, and DB
+• **Ticketing Machine:** This directory contains the Python3 code for designing the hand-held ticketing machine, and DB
