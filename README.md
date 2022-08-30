@@ -10,6 +10,6 @@ The project development started in April 2022 as a group project and has been li
 • **Ticket Machine:** Python 3.7, Firebase (Real-Time Databases), Raspberry Pi | Dependencies: PyreBase, Pandas, NumPy
 
 ### Files and SubDirectories
-• **Mobile Application:** This directory contains the Dart code, and afilliated resources for building the flutter application
+• **Mobile Application:** This directory contains the Dart code and afilliated resources for building the flutter application
 <br>
 • **Ticketing Machine:** This directory contains the Python3 code for designing the hand-held ticketing machine, and DB
