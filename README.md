@@ -5,11 +5,11 @@ The project development started in April 2022 as a group project and has been li
 
 # SubDirectories and Constraints
 ### Software Dependencies
-• **Mobile App:** Dart, Flutter, MapsSDK, PlacesSDK, Distance Matrix API, Directions API, Roads API and Geocoding API
+• **Mobile App:** Dart, Flutter, Maps SDK, Places SDK, Distance Matrix API, Directions API, Roads API, and Geocoding API
 <br>
-• **Ticket Machine:** Python 3.7, Firebase (Real-Time Database), RaspberryPi | Dependencies: Pyrebase, Pandas, NumPy
+• **Ticket Machine:** Python 3.7, Firebase (Real-Time Databases), Raspberry Pi | Dependencies: PyreBase, Pandas, NumPy
 
 ### Files and SubDirectories
-• **Mobile Application:** This directory contains the dart code and related resources for building the mobile application
+• **Mobile Application:** This directory contains the dart code, and related resources for building the mobile application
 <br>
-• **Ticketing Machine:** This directory contains the python3 code for designing the handheld ticketing machine and DB
+• **Ticketing Machine:** This directory contains the python3 code for designing the handheld ticketing machine, and DB
