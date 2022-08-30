@@ -13,3 +13,6 @@ The project development started in April 2022 as a group project and has been li
 • **Mobile Application:** This directory contains the Dart code and afilliated resources for building the flutter application
 <br>
 • **Ticketing Machine:** This directory contains the Python3 code for designing the hand-held ticketing machine, and DB
+
+All relevant updates, and stable versions are made available in the ~/stableVersion sub-directory. Some subdirectories may be sensitive for the project and may trigger review requests, when pull requests touch these files. Github handles with commit rights made available in the ~/Template Files/CODEOWNERS are responsible for reviewing such changes
+
