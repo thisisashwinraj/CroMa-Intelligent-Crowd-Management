@@ -30,7 +30,7 @@ To run the ticketing machine's sofware on a local computer, open the terminal, i
 python ticketingMachine.py
 ```
 
-CroMas development take place on GitHub. Please submit any bug that you may encounter to the issue tracker with a reproducible example demonstrating the problem in accordance with the issue template, present in contributing files
+CroMas development take place on GitHub. Please submit any bug that you may encounter to the issue tracker with a reproducible example demonstrating the problem, in accordance with the issue template, present in contributing files
 
 ```
 ├── assets
