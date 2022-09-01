@@ -1,7 +1,7 @@
 # CroMa - Crowd Management Software
 CroMa is an android application that uses a python backend hardware, built on raspberry pi integrated with a firebase real-time database, and flutter framework for efficient crowd management in public transports such as buses & taxies. The hardware is effectively a handheld ticketing machine used for printing tickets, and collecting selective information about passengers. After data processings, the mobile application displays the output to the users. No LogIns required.
 
-The project development started in April 2022 as a group project and has been licensed under the Creative Commons Attribution - Non Commercial - No Derivs License (CC-BY-NC-ND). The passenger data collected, is maintained as per the Privacy Policy. The Pull Requests are maintained by a team of contributors. Learn more about CroMa software here
+The project development started in April 2022 as a group project and has been licensed under the [Creative Commons Attribution - Non Commercial - No Derivs License](https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware/blob/main/LICENSE) (CC-BY-NC-ND). The passenger data collected, is maintained as per the Privacy Policy. The Pull Requests are maintained by a team of contributors. Learn more about CroMa software [here](https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware/blob/main/LICENSE)
 
 # SubDirectories and Constraints
 ### Software Dependencies
@@ -25,7 +25,7 @@ The passengers data is maintained in the FireBase Real-Time database for synchro
 
 The android app is the end-user's application that allows the user to compare various transit options, and choose the most ideal option that fits their needs. The users, start with opening the application, and making a query, by entering their starting point, intended destination, and the type of bus (fast, SPF, express, deluxe, etc). No LogIn is required for using the android mobile app. The application looks up into the data base, and displays the location of buses in real-time within a pre set radius that passes through both their starting point and the destination entered by the user. The bus markers with red colour indicates heavy rush, while the green color indicates light occupancy. On tapping a given bus marker, the application displays more details about that bus to the users including, their estimated time of arrival, seat occupancy & ETA of buses on same route etc. Users can compare multiple options to make an informed decision.
 
-To run the ticketing machine's sofware on a local computer, open the terminal, install pyrebase, & type the command:
+To run the ticketing machine's sofware on a local computer, open the terminal, install [pyrebase](https://pypi.org/project/Pyrebase/), & type the command:
 ```
 python ticketingMachine.py
 ```
@@ -48,7 +48,7 @@ CroMas development take place on GitHub. Please submit any bug that you may enco
 └── pubspecam.lock                // It contain the version of each dependencies and packages
 ```
 
-To run the application, start debugging by clicking **Run > Start Debugging** from the main IDE window (or press F5). If you are using VS Code, you should see a set of Flutter specific entries in the status bar, including a Flutter SDK version and a device name (or a message displaying No Devices). The Flutter extension automatically selects the latest device connected. However, if you have multiple devices/simulators connected, click device in the status bar to see a pick-list at the top of the screen. Select the device, you want to use for running, or debugging, and finally, run this application.
+To run the application, start debugging by clicking **Run > Start Debugging** from the main IDE window (or press F5). If you are using [VS Code](https://code.visualstudio.com/), you should see a set of Flutter specific entries in the status bar, including a [Flutter SDK](https://docs.flutter.dev/get-started/install) version and a device name (or a message displaying No Devices). The Flutter extension automatically selects the latest device connected. However, if you have multiple devices/simulators connected, click device in the status bar to see a pick-list at the top of the screen. Select the device, you want to use for running, or debugging, and finally, run this application.
 
 
 # Contribution Guidelines
@@ -59,10 +59,10 @@ git clone https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware.git
 Before cloning the repository, make sure to navigate to the working subdirectory of your command line interface and ensure that no folder with same name exists. Other ways to clone the repository includes using a password protected SSH key, or by using Git CLI. The changes may additionally be performed by opening this repo using GitHub Desktop
 
 ### Edit the Source Code and Make Desired Changes
-To be able to make changes to the source, you may need to install and use a python IDE such as PyCharm, Microsoft VisualStudio and/or any other python interpreter. You will also require a Jupyter notebook  for working with the code snippets. To work with the flutter application, you shall have Flutter SDK installed on your local computer, and a USB cable. Ensure that you are strictly following the basic programming standards, while introducing the desired updates
+To be able to make changes to the source, you may need to install and use a python IDE such as [PyCharm](https://www.jetbrains.com/pycharm/download/), [Microsoft VisualStudio](https://code.visualstudio.com/) and/or any other python interpreter. You will also require a Jupyter notebook  for working with the code snippets. To work with the flutter application, you shall have [Flutter SDK](https://docs.flutter.dev/get-started/install) installed on your local computer, and a USB cable. Ensure that you are strictly following the basic programming standards, while introducing the desired updates
 
 ### Submitting a Pull Request
-Before opening a Pull Request, it is recommended to have a look at the full contributing page to make sure your code complies with all the pull request guidelines. Please ensure that you satisfy the [~/checklist](https://github.com/thisisashwinraj/VerticalX-Recommendation-System/tree/main/Template%20Files/PULL_REQUEST_TEMPLATE) before submitting your PR.
+Before opening a Pull Request, it is recommended to have a look at the full contributing page to make sure your code complies with all the pull request guidelines. Please ensure that you satisfy the [~/checklist](https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware/tree/main/Template%20Files/PULL_REQUEST_TEMPLATE) before submitting your PR.
 
 Navigate to this subdirectory, & check status of all files that were altered (red) by running the below code in Git Bash:
 ```
@@ -87,6 +87,6 @@ git push origin main
 All pull requests are reviewed on a monthly rolling basis. Your understanding is appreciated during the review process
 
 # License and Project Status
-CroMa, & all its resources are distributed under [Creative Commons Attribution - Non Commercial - No Derivs License](). The app is compatible with all operating systems. The latest released stable version of CroMa is v1.0.1, and is available to be used on all local system for general use through the mobile app. All releases are logged in the [~/StableVersions]()
+CroMa, & all its resources are distributed under [Creative Commons Attribution - Non Commercial - No Derivs License](https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware/blob/main/LICENSE). The app is compatible with all operating systems. The latest released stable version of CroMa is v1.0.1, and is available to be used on all local system for general use through the mobile app. All releases are logged in the [~/StableVersions]()
 
 Upcoming updates will include new features, optimized recommendations using AI/ML and support for other transits
