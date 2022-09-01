@@ -87,6 +87,6 @@ git push origin main
 All pull requests are reviewed on a monthly rolling basis. Your understanding is appreciated during the review process
 
 # License and Project Status
-CroMa, & all its resources are distributed under [Creative Commons Attribution - Non Commercial - No Derivs License](). The app is compatible with all operating systems. The latest released stable version of CroMa is v1.0.1, and is available to be used on any local system for general use through the mobile app. All releases are logged in the [~/Stable Versions]()
+CroMa, & all its resources are distributed under [Creative Commons Attribution - Non Commercial - No Derivs License](). The app is compatible with all operating systems. The latest released stable version of CroMa is v1.0.1, and is available to be used on all local system for general use through the mobile app. All releases are logged in the [/Stable Versions]()
 
 Upcoming updates will include more features, optimized recommendations using AI/ML, & support for other transits
