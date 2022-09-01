@@ -7,7 +7,7 @@ The project development started in April 2022 as a group project and has been li
 ### Software Dependencies
 • **Mobile App:** Dart, Flutter, Maps SDK, Places SDK, Distance Matrix API, Directions API, Roads API, and Geocoding API
 <br>
-• **Ticket Machine:** Python 3.7, Firebase (Real-Time Databases), RaspberryPi and ArduinoUNO| Dependencies: Pyrebase
+• **Ticket Machine:** Python 3.7, Firebase (Real-Time Database), RaspberryPi and ArduinoUNO | Dependencies: Pyrebase
 
 ### Files and SubDirectories
 • **Mobile Application:** This directory contains the Dart code and afilliated resources for building the flutter application
