@@ -48,7 +48,7 @@ CroMas development take place on GitHub. Please submit any bug that you may enco
 └── pubspecam.lock                // It contain the version of each dependencies and packages
 ```
 
-To run the application, start debugging by clicking **Run > Start Debugging** from the main IDE window (or press F5). If you are using VS Code, you should see a set of Flutter specific entries in the status bar, including a Flutter SDK version and a device name (or a message displaying No Devices). The Flutter extension automatically selects the latest device connected. However, if you have multiple devices/simulators connected, click device in the status bar to see a pick-list at the top of the screen. Select the device you want to use for running, or debugging, and finally, run this application.
+To run the application, start debugging by clicking **Run > Start Debugging** from the main IDE window (or press F5). If you are using VS Code, you should see a set of Flutter specific entries in the status bar, including a Flutter SDK version and a device name (or a message displaying No Devices). The Flutter extension automatically selects the latest device connected. However, if you have multiple devices/simulators connected, click device in the status bar to see a pick-list at the top of the screen. Select the device, you want to use for running, or debugging, and finally, run this application.
 
 
 # Contribution Guidelines
