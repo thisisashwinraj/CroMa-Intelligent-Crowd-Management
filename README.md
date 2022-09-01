@@ -48,7 +48,7 @@ CroMa's development take place on GitHub. Please submit any bugs that you may en
 └── pubspecam.lock                // It contain the version of each dependencies and packages
 ```
 
-To run the application, start debugging by clicking Run > Start Debugging from the main IDE window (or press F5). If you are using VS Code, you should see a set of Flutter specific entries in the status bar, including a Flutter SDK version and a device name (or a message displaying No Devices). The Flutter extension automatically selects the last device connected. However, if you have multiple devices/simulators connected, click device in the status bar to see a pick-list at the top of the screen. Select the device you want to use for running or debugging and finally, run the application.
+To run the application, start debugging by clicking **Run > Start Debugging** from the main IDE window (or press F5). If you are using VS Code, you should see a set of Flutter specific entries in the status bar, including a Flutter SDK version and a device name (or a message displaying No Devices). The Flutter extension automatically selects the latest device connected. However, if you have multiple devices/simulators connected, click device in the status bar to see a pick-list at the top of the screen. Select the device you want to use for running, or debugging, and finally, run this application.
 
 
 # Contribution Guidelines
@@ -59,12 +59,12 @@ git clone https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware.git
 Before cloning the repository, make sure to navigate to the working subdirectory of your command line interface and ensure that no folder with same name exists. Other ways to clone the repository includes using a password protected SSH key, or by using Git CLI. The changes may additionally be performed by opening this repo using GitHub Desktop
 
 ### Edit the Source Code and Make Desired Changes
-To be able to make changes to the source, you may need to install and use a python IDE such as PyCharm, Microsoft VisualStudio and/or any other python interpreter. You will also require a Jupyter notebook  for working with the code snippets. To work with the flutter application, you shall have Flutter SDK installed on your local computer, and a USB cable. Ensure that you are strictly following the basic coding standards, while making the desired change
+To be able to make changes to the source, you may need to install and use a python IDE such as PyCharm, Microsoft VisualStudio and/or any other python interpreter. You will also require a Jupyter notebook  for working with the code snippets. To work with the flutter application, you shall have Flutter SDK installed on your local computer, and a USB cable. Ensure that you are strictly following the basic programming standards, while introducing the desired updates
 
 ### Submitting a Pull Request
 Before opening a Pull Request, it is recommended to have a look at the full contributing page to make sure your code complies with all the pull request guidelines. Please ensure that you satisfy the [~/checklist](https://github.com/thisisashwinraj/VerticalX-Recommendation-System/tree/main/Template%20Files/PULL_REQUEST_TEMPLATE) before submitting your PR.
 
-Navigate to this subdirectory & check status of all files that were altered (red) by running the below code in Git Bash:
+Navigate to this subdirectory, & check status of all files that were altered (red) by running the below code in Git Bash:
 ```
 git status
 ```
