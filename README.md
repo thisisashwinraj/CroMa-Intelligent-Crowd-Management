@@ -25,14 +25,12 @@ The passengers data is maintained in the FireBase Real-Time database for synchro
 
 The android app is the end-user's application that allows the user to compare various transit options, and choose the most ideal option that fits their needs. The users start with opening the application, and making a query, by entering their starting point, intended destination, and the type of bus (fast, SPF, express, deluxe, etc). No LogIn is required for using the android mobile app. The application looks up into the DataBase, and displays the location of buses in real-time within a pre set radius that passes through both their starting point and the destination entered by the user. The bus markers with red colour indicates heavy rush, while the green color indicates light occupancy. On tapping a given bus marker, the application displays more details about that bus to the users including, their estimated time of arrival, seat occupancy & ETA of buses on same route etc. Users can compare multiple options to make an informed decision.
 
-To run the streamlit application on a local computer, open the terminal, install streamlit and then type the command:
-
 To run the ticketing machine's sofware on a local computer, open the terminal, install pyrebase & type the command:
 ```
 python ticketingMachine.py
 ```
 
-CroMa's development take place on GitHub. Please submit any bugs that you may encounter to the issue tracker with a reproducible example, demonstrating the problem in accordance with the issue template present in contributing files.
+CroMa's development take place on GitHub. Please submit any bugs that you may encounter to the issue tracker with a reproducible example demonstrating the problem in accordance with the issue template present in contributing files
 
 ```
 ├── assets
@@ -50,18 +48,18 @@ CroMa's development take place on GitHub. Please submit any bugs that you may en
 └── pubspecam.lock                // It contain the version of each dependencies and packages
 ```
 
-To run the application start debugging by clicking Run > Start Debugging from the main IDE window, or press F5. If you are using VS Code, you should see a set of Flutter specific entries in the status bar, including a Flutter SDK version and a device name (or the message No Devices). The Flutter extension automatically selects the last device connected. However, if you have multiple devices/simulators connected, click device in the status bar to see a pick-list at the top of the screen. Select the device you want to use for running or debugging.
+To run the application, start debugging by clicking Run > Start Debugging from the main IDE window (or press F5). If you are using VS Code, you should see a set of Flutter specific entries in the status bar, including a Flutter SDK version and a device name (or a message displaying No Devices). The Flutter extension automatically selects the last device connected. However, if you have multiple devices/simulators connected, click device in the status bar to see a pick-list at the top of the screen. Select the device you want to use for running or debugging and finally, run the application.
 
 
 # Contribution Guidelines
 To start contributing to the project, clone the repository into your local system subdirectory using the below git code:
 ```
-git clone https://github.com/ashwinraj-in/Kiwi.git
+git clone https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware.git
 ```
 Before cloning the repository, make sure to navigate to the working subdirectory of your command line interface and ensure that no folder with same name exists. Other ways to clone the repository includes using a password protected SSH key, or by using Git CLI. The changes may additionally be performed by opening this repo using GitHub Desktop
 
 ### Edit the Source Code and Make Desired Changes
-To be able to make changes to the source, you may need to install and use a python IDE such as PyCharm, Microsoft VisualStudio and/or any other python interpreter. You will also require a Jupyter notebook  for working with the code snippets. The movies posters are fetched using the [TMDb's API](https://developers.themoviedb.org/3). You may create your own API by logging into TMDb developers API-3. Ensure that you are strictly following the basic coding standards, while making the desired change
+To be able to make changes to the source, you may need to install and use a python IDE such as PyCharm, Microsoft VisualStudio and/or any other python interpreter. You will also require a Jupyter notebook  for working with the code snippets. To work with the flutter application, you shall have Flutter SDK installed on your local computer, and a USB cable. Ensure that you are strictly following the basic coding standards, while making the desired change
 
 ### Submitting a Pull Request
 Before opening a Pull Request, it is recommended to have a look at the full contributing page to make sure your code complies with all the pull request guidelines. Please ensure that you satisfy the [~/checklist](https://github.com/thisisashwinraj/VerticalX-Recommendation-System/tree/main/Template%20Files/PULL_REQUEST_TEMPLATE) before submitting your PR.
