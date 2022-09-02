@@ -63,7 +63,9 @@ Before cloning the repository, make sure to navigate to the working subdirectory
 ### Edit the Source Code and Make Desired Changes
 To be able to make changes to the source, you may need to install and use a python IDE such as [PyCharm](https://www.jetbrains.com/pycharm/download/), Microsoft [VisualStudio](https://code.visualstudio.com/) and/or any other python interpreter. You will also require a Jupyter notebook  for working with the code snippets. To work with the flutter application, you shall have [Flutter SDK](https://docs.flutter.dev/get-started/install) installed on your local computer, and a USB cable. Ensure that you are strictly following the basic programming standards, while introducing the desired updates
 
-### Submitting a Pull Request
+![test](https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/blob/main/assets/CroMa_StoryboardDark.png#gh-dark-mode-only)
+![test](https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/blob/main/assets/CroMa_StoryboardLight.png#gh-light-mode-only)
+
 Before opening a Pull Request, it is recommended to have a look at the full contributing page to make sure your code complies with all the pull request guidelines. Please ensure that you satisfy the [~/checklist](https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware/tree/main/Template%20Files/PULL_REQUEST_TEMPLATE) before submitting your PR.
 
 Navigate to this subdirectory, & check status of all files that were altered (red) by running the below code in Git Bash:
