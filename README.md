@@ -92,3 +92,5 @@ All pull requests are reviewed on a monthly rolling basis. Your understanding is
 CroMa, & all its resources are distributed under [Creative Commons Attribution - Non Commercial - No Derivs License](https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware/blob/main/LICENSE). The app is compatible with all operating systems. The latest released stable version of CroMa is v1.0.1, and is available to be used on all local system for general use through the mobile app. All releases are logged in the [~/StableVersions]()
 
 Upcoming updates will include new features, optimized recommendations using AI/ML and support for other transits
+<br>
+All contributors may reproduce and share the licensed material in whole or in part for non-commercial purposes only
