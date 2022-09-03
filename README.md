@@ -53,6 +53,9 @@ CroMas development take place on GitHub. Please submit any bug that you may enco
 To run the application, start debugging by clicking **Run > Start Debugging** from the main IDE window (or press F5). If you are using [VS Code](https://code.visualstudio.com/), you should see a set of Flutter specific entries in the status bar, including a [Flutter SDK](https://docs.flutter.dev/get-started/install) version and a device name (or a message displaying No Devices). The Flutter extension automatically selects the latest device connected. However, if you have multiple devices/simulators connected, click device in the status bar to see a pick-list at the top of the screen. Select the device, you want to use for running, or debugging, and finally, run this application.
 
 # CroMa - Under the Hood
+
+This software project aims to use human-centric technology to take public transportation and crowd manangement one step ahead. We have used the Rapid Application Development model (RAD) to design several firmware components, developed simultaneously as if they were smaller, individual projects. The different components are then assembled into the working prototypes.
+
 ### Defining the Problem Statements
 
 **Problem  Statement 1:** 
