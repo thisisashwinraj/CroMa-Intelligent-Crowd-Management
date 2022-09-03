@@ -56,16 +56,16 @@ To run the application, start debugging by clicking **Run > Start Debugging** fr
 ### Defining the Problem Statements
 
 **Problem  Statement 1:** 
-Ramesh is a busy executive who needs to reach his office on time and decide whether to take a public bus for commuting or use his personal vehicle because he stays far away from the office, & wants to save money
+Ramesh is a busy executive who needs to reach his office on time and decide whether to take a public bus for commuting or use his personal vehicle because he stays far away from the office & wants to save money
 <br>
 **Hypothesis:**
-If Ramesh uses CroMa for tracking the public buses available at his nearest bus-stop then he can plan his shuttle accordingly and will reach his destination at time, without needing to travel in an alternate transit choice.
+If Ramesh uses CroMa for tracking the public buses available at his nearest bus-stop then he can plan his shuttle accordingly and will reach his office plance at time, without needing to travel in an alternate public transport.
 
 **Problem Statement 2:**
-Vartika is a seven month pregnant women who needs to board a long distance bus with ample seats available because she is agoraphobic, and her physical condition does'nt allow her to stand for longer duration
+Vartika is a seven month pregnant women who needs to board a long distance bus with ample seats available because she is agoraphobic, and her physical conditions does'nt allow her to stand for longer duration
 <br>
 **Hypothesis:**
-If Vartika uses CroMa for checking the buses in her proximity with less occupancy then she can make an intelligent choice of the bus she wants to board, & can grab a seat without needing to worry about standing for long.
+If Vartika uses CroMa for checking the buses in her proximity with less occupancy, then she can make an intelligent choice of the bus she wants to board, & can grab a seat without needing to worry about standing for long.
 
 # Contribution Guidelines
 To start contributing to the project, clone the repository into your local system subdirectory using the below git code:
