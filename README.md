@@ -52,6 +52,20 @@ CroMas development take place on GitHub. Please submit any bug that you may enco
 
 To run the application, start debugging by clicking **Run > Start Debugging** from the main IDE window (or press F5). If you are using [VS Code](https://code.visualstudio.com/), you should see a set of Flutter specific entries in the status bar, including a [Flutter SDK](https://docs.flutter.dev/get-started/install) version and a device name (or a message displaying No Devices). The Flutter extension automatically selects the latest device connected. However, if you have multiple devices/simulators connected, click device in the status bar to see a pick-list at the top of the screen. Select the device, you want to use for running, or debugging, and finally, run this application.
 
+# CroMa - Under the Hood
+### Defining the Problem Statements
+
+**Problem  Statement 1:** 
+Ramesh is a busy executive who needs to reach his office on time and decide whether to take a public bus for commuting or use his personal vehicle because he stays far away from the office
+<br>
+**Hypothesis:**
+If Ramesh uses CroMa for tracking the buses available at his nearest bus-stops then he can plan his commute accordingly and will reach his office at time.
+
+**Problem Statement 2:**
+Vartika is a six month pregnant women who needs to board a long distance bus with ample seats available because she is agoraphobic and her physical condition does'nt allow her to stand for long durations.
+<br>
+**Hypothesis:**
+If Vartika uses CroMa for checking the buses in her proximity with less occupancy then she can make an intelligent choice of the bus she wants to board and grab a seat.
 
 # Contribution Guidelines
 To start contributing to the project, clone the repository into your local system subdirectory using the below git code:
