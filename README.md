@@ -70,6 +70,9 @@ Vartika is a seven month pregnant women who needs to board a long distance bus w
 **Hypothesis:**
 If Vartika uses CroMa, for checking the buses in her proximity with less occupancy, then she can make an intelligent choice of the bus she wants to board, & can grab a seat, without needing to worry about standing for long.
 
+![test](https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/blob/main/assets/CroMa_StoryboardDark.png#gh-dark-mode-only)
+![test](https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/blob/main/assets/CroMa_StoryboardLight.png#gh-light-mode-only)
+
 # Contribution Guidelines
 To start contributing to the project, clone the repository into your local system subdirectory using the below git code:
 ```
@@ -79,9 +82,6 @@ Before cloning the repository, make sure to navigate to the working subdirectory
 
 ### Edit the Source Code and Make Desired Changes
 To be able to make changes to the source, you may need to install and use a python IDE such as [PyCharm](https://www.jetbrains.com/pycharm/download/), Microsoft [VisualStudio](https://code.visualstudio.com/), and/or any other python interpreter. You will also require a Jupyter notebook  for working with the code snippets. To work with the Flutter application, you shall have [Flutter SDK](https://docs.flutter.dev/get-started/install) installed on your local computer, and a USB cable. Ensure that you are strictly following the basic programming standards, while introducing the desired updates
-
-![test](https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/blob/main/assets/CroMa_StoryboardDark.png#gh-dark-mode-only)
-![test](https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/blob/main/assets/CroMa_StoryboardLight.png#gh-light-mode-only)
 
 Before opening a Pull Request, it is recommended to have a look at the full contributing page to make sure your code complies with all the pull request guidelines. Please ensure that you satisfy the [~/Checklist](https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware/tree/main/Template%20Files/PULL_REQUEST_TEMPLATE) before submitting your PR.
 
