@@ -65,7 +65,7 @@ If Ramesh uses CroMa for tracking the public buses available at his nearest bus-
 Vartika is a seven month pregnant women who needs to board a long distance bus with ample seats available because she is agoraphobic, and her physical conditions does'nt allow her to stand for longer duration
 <br>
 **Hypothesis:**
-If Vartika uses CroMa, for checking the buses in her proximity with less occupancy, then she can make an intelligent choice of the bus she wants to board, & can grab a seat without needing to worry about standing for long.
+If Vartika uses CroMa, for checking the buses in her proximity with less occupancy, then she can make an intelligent choice of the bus she wants to board, & can grab a seat, without needing to worry about standing for long.
 
 # Contribution Guidelines
 To start contributing to the project, clone the repository into your local system subdirectory using the below git code:
