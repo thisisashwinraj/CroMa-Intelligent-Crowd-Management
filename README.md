@@ -56,16 +56,16 @@ To run the application, start debugging by clicking **Run > Start Debugging** fr
 ### Defining the Problem Statements
 
 **Problem  Statement 1:** 
-Ramesh is a busy executive who needs to reach his office on time and decide whether to take a public bus for commuting or use his personal vehicle because he stays far away from the office
+Ramesh is a busy executive who needs to reach his office on time and decide whether to take a public bus for commuting or use his personal vehicle because he stays far away from the office and wants to save money
 <br>
 **Hypothesis:**
-If Ramesh uses CroMa for tracking the buses available at his nearest bus-stops then he can plan his commute accordingly and will reach his office at time.
+If Ramesh uses CroMa for tracking the public buses available at his nearest bus-stops then he can plan his commute accordingly and will reach his office at time, without needing to travel in an alternate transit choice.
 
 **Problem Statement 2:**
-Vartika is a six month pregnant women who needs to board a long distance bus with ample seats available because she is agoraphobic and her physical condition does'nt allow her to stand for long durations.
+Vartika is a seven month pregnant women who needs to board a long distance bus with ample seats available because she is agoraphobic, and her physical condition does'nt allow her to stand for longer durations.
 <br>
 **Hypothesis:**
-If Vartika uses CroMa for checking the buses in her proximity with less occupancy then she can make an intelligent choice of the bus she wants to board and grab a seat.
+If Vartika uses CroMa for checking the buses in her proximity with less occupancy then she can make an intelligent choice of the bus she wants to board, and can grab a seat without needing to worry about standing for long durations
 
 # Contribution Guidelines
 To start contributing to the project, clone the repository into your local system subdirectory using the below git code:
