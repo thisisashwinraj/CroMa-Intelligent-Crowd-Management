@@ -73,6 +73,19 @@ Vartika is a seven month pregnant women who needs to board a long distance bus w
 **Hypothesis:**
 If Vartika uses CroMa, for checking the buses in her proximity with less occupancy, then she can make an intelligent choice of the bus she wants to board, & can grab a seat, without needing to worry about standing for long.
 
+### Understanding the Algorithm that Powers CroMa
+The hardware cycle starts with the conductor initializing the trip in the handheld ticketing machine by entering the busId. The machine is now configured to reflect the pre-set values for three parameters that are: available seats, current location and passengers in bus. The ticketing machine now shows options for printing the tickets, displaying trip details (used by the conductors) and displaying total fare collections.
+
+When a new passenger boards the bus, the conductor issues them a ticket after collecting information about their point of origin, their destination and the number of co-passengers. Apart from printing the tickets, the proposed ticketing machine sends this data to the firebase real-time database wherein the values for the previously mentioned three parameters are updated. The location data are collected by the GPS module. For passenger using concession cards, a QR code scanner is used. This ensures the authenticity of the card holder, as well as the proper updation of the crowd data.
+
+Under the hood, the number of current passengers (default value zero, when the bus starts the trip) is calculated by adding the number of people who onboarded the bus at a particular bus stop and subtracting the number of passengers who deboarded the bus at that partcular stop from the total numbr of passengers that were present in the previous bus stop. We already know that no passenger can onboard a bus between two consecutive bus stops, and thus accurate crowd levels will be reflected. The bus fare is calculated by adding a variable fare (depending on the distance a passenger needs to travel) to the fixed fare (minimum payable). 
+
+In this repository, we have assumed that bus fares will increase by a given amount after every third stop the passenger needs to cross to reach his destination, starting from his origin point. The transport corporation can simply revise the bus fare by changing the values of the variable part and/or the fixed part.
+
+Users waiting for boarding a bus can open the CroMa application on their mobile device. They need to initialize the application by posting a query, enteringg their destination, onboarding point and the required bus type. The app then fetches the list of all buses that passes through their current location and destination from the firebase real time databse and displays it to the user. The user can select a particular bus to view more details about the bus including the available number of seats, crowd levels in the bus, timings for buses with similar route,  expected fare, etc.
+
+The application uses Maps SDK to display the dynamic map interface. The Directions API displayes the directions of buses, featuring real-time traffic information. The Distance Matrix API isused to calculate the travel time and distances between the origins and destinations. The  Geocoding API is used to convert coordinates into addresses and addresses into coordinates. Finally the Places SDK integrates Google’s place details, search, and autocomplete into the CroMa apps.
+
 # Contribution Guidelines
 To start contributing to the project, clone the repository into your local system subdirectory using the below git code:
 ```
