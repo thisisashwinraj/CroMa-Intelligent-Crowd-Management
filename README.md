@@ -64,9 +64,6 @@ Ramesh is a busy executive who needs to reach his office on time and decide whet
 **Hypothesis:**
 If Ramesh uses CroMa for tracking the public buses available at his nearest bus-stop then he can plan his shuttle accordingly, & will reach his desired location at time, without needing to travel in an alternate public transport.
 
-![test](https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/blob/main/assets/CroMa_StoryboardDark.png#gh-dark-mode-only)
-![test](https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/blob/main/assets/CroMa_StoryboardLight.png#gh-light-mode-only)
-
 **Problem Statement 2:**
 Vartika is a seven month pregnant women who needs to board a long distance bus with ample seats available because she is agoraphobic, and her physical conditions does'nt allow her to stand for longer duration
 <br>
@@ -77,6 +74,9 @@ If Vartika uses CroMa, for checking the buses in her proximity with less occupan
 The system's hardware cycle starts with the bus conductor initializing a new trip in the handheld ticketing machine by entering the Bus Id. This machine is now configured to the routes associated with that Bus Id, and reflects the pre-set values for necessary passenger data variables, that are: total number of available seats, the current location, and total number of passengers in bus. The ticketing machine now shows options for printing the tickets, displaying trip details (used by conductors), and showing the total fare collections, during the trip. More options will be added in the future.
 
 When new passenger boards this bus, the bus conductor issues them a bus ticket after collecting informations about their point of origin, intended destination & the total number of copassengers, if any. Apart from printing tickets, the proposed ticketing machine sends this data to the FireBase real-time database, wherein, the values for the previously mentioned three parameters are updated. Bus's location data are collected by the GPS module. For passengers using concession cards, a QR code scanner is used. This ensures authenticity of the card holder, & proper updation of data.
+
+![test](https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/blob/main/assets/CroMa_StoryboardDark.png#gh-dark-mode-only)
+![test](https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/blob/main/assets/CroMa_StoryboardLight.png#gh-light-mode-only)
 
 Under the hood, total number of current passengers (default value zero, when the bus starts the trip) is calculated by adding total number of people who onboarded the bus at a given particular bus stop and subtracting the number of passengers who deboarded the bus at that partcular busstop from the total number of passengers that were present in the previous bus stop. We already know that no passenger can onboard the bus between any two consecutive bus stops, and thus accurate crowd level will be reflected. The bus fare is calculated by adding a variable fare (depending on the distance the passenger needs to travel to reach their destination) to the fixed fare (minimum payable amount)
 
