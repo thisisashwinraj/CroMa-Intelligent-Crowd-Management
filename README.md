@@ -54,7 +54,7 @@ To run the application, start debugging by clicking **Run > Start Debugging** fr
 
 # CroMa - Under the Hood
 
-The software project aims to use human-centric technology to take public transportation & crowd manangement one step ahead. We used Rapid Application Development model (RAD) to design several firmware components developed simultaneously, as if they were smaller individual projects. These are then assembled into the main working prototype.
+The software project aims to use human-centric technology to take public transportation & crowd manangement one step ahead. We used [Rapid Application Development model](https://en.wikipedia.org/wiki/Rapid_application_development) (RAD) to design several firmware components developed simultaneously, as if they were smaller individual projects. These are then assembled into the main working prototype.
 
 ### Defining the Problem Statements
 
