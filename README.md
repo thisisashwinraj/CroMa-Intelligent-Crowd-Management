@@ -117,7 +117,7 @@ git push origin main
 ```
 All pull requests are reviewed on a monthly rolling basis. Your understanding is appreciated during the review process
 
-# Data Security & Privacy
+# Data Security and Privacy
 Safegaurding your data starts with understanding how CroMa collects, and processes your personal info. The in-hand ticketing machine only collects data pertaining to the user's starting location, destination, and the total number of co-passengers. When this data is shared, all that CroMa records is that a few passengers bought ticket(s) and onboarded the bus, but it doesn't know who they exactly are. CroMa does not collect your personal data in any form. Similarly, on the mobile app's side, it does'nt require users to log-in to the application. They can simply startoff without signing up. 
 
 # License and Project Status
