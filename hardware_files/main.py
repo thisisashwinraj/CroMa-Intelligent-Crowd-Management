@@ -1,5 +1,5 @@
 # Author: Ashwin Raj <thisisashwinraj@gmail.com>
-# License: Creative Commons Attribution - Non Commercial - No Derivs License
+# License: Creative Commons Attribution - NonCommercial - NoDerivs License
 
 import busFares
 import database
@@ -325,7 +325,8 @@ def tripDetails():
         + terminal.busId
         + ")"
     )
-    print("Current Location: " + terminal.selectedRoute[terminal.currentLocation - 1])
+    print("Current Location: " +
+          terminal.selectedRoute[terminal.currentLocation - 1])
     print("Total Tickets Printed: " + str(terminal.totalTicketsPrinted))
 
     # Update passenger count, and print total number of passengers onboard
