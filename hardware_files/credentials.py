@@ -1,8 +1,0 @@
-API_KEY = "AIzaSyCY6jTxpTWnGIS46sK1XnwilvceAuaeUKE7"
-AUTH_DOMAIN = "croma-ed592.firebaseapp.com"
-PROJECT_ID = "croma-ed592"
-STORAGE_BUCKET = "croma-ed592.appspot.com"
-MESSAGING_SENDER_ID = "85756972861"
-APP_ID = "1:85756972861:web:bb73b935a71f90ee603f54"
-MEASUREMENT_ID = "G-ZXEDMDDFMT"
-DATABASE_URL = "https://croma-ed592-default-rtdb.firebaseio.com/"
