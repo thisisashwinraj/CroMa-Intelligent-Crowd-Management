@@ -5,6 +5,7 @@ import busFares
 import database
 import terminal
 
+
 terminal.collection = 0
 terminal.crowdManager = []
 terminal.currentPassengerCount = 0
@@ -224,6 +225,10 @@ def printTicket():
         None
         Prints the ticket price
 
+    Warning:
+        User's destination cannot be before or same as the origin
+        Number of passengers cannot be zero
+
     .. See Also:
         calculateTicketPrice()
         updatePassengerCount()
@@ -240,6 +245,14 @@ def printTicket():
 
     print("\nEnter the no. of co-passengers: ")
     numberOfPassengers = int(input())
+
+    if userStartingPoint >= userDestination:
+        print("\nEnter a Valid Input")
+        return
+    
+    if numberOfPassengers < 1:
+        print("Number of passengers can not be less than 1")
+        return
 
     ticketPrice = calculateTicketPrice(
         userStartingPoint, userDestination, numberOfPassengers
@@ -287,6 +300,7 @@ def calculateTicketPrice(userStartingPoint, userDestination, numberOfPassengers)
 
     # divide routewayStopCount by dynamicCostMultiplier to get cost epochs
     variableTicketPriceEpochs = int(routewayStopCount / dynamicCostMultiplier)
+    
     totalTicketPrice = (
         busFares.fixedTicketPrice
         + (variableTicketPriceEpochs * busFares.variableTicketPrice)
@@ -295,7 +309,7 @@ def calculateTicketPrice(userStartingPoint, userDestination, numberOfPassengers)
     # update the total collections by adding the value of the ticket price
     terminal.collection = terminal.collection + totalTicketPrice
 
-    return float(totalTicketPrice)
+    return int(totalTicketPrice)
 
 
 def tripDetails():
