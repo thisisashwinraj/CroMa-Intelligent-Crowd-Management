@@ -1,5 +1,3 @@
-import main
-
 # [Pre-Defined] A list of all bus stops in a given route
 global selectedRoute
 # [Pre-Defined] Variable specifying the type of bus (eg: express, city etc)
