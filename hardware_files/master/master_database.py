@@ -161,3 +161,35 @@ def master_bus_delete():
     db = firebase.database()
 
     db.child(master_terminal.bus_id).remove()
+
+def bus_fare_updation():
+    firebaseConfig = {
+        "apiKey": master_credentials.ROUTE_API_KEY,
+        "authDomain": master_credentials.ROUTE_AUTH_DOMAIN,
+        "projectId": master_credentials.ROUTE_PROJECT_ID,
+        "storageBucket": master_credentials.ROUTE_STORAGE_BUCKET,
+        "messagingSenderId": master_credentials.ROUTE_MESSAGING_SENDER_ID,
+        "appId": master_credentials.ROUTE_APP_ID,
+        "measurementId": master_credentials.ROUTE_MEASUREMENT_ID,
+        "databaseURL": master_credentials.ROUTE_DATABASE_URL,
+    }
+
+    # Initialize connection with FireBase database & set reference variable
+    firebase = pyrebase.initialize_app(firebaseConfig)
+    db = firebase.database()
+
+    print("\nEnter the type of bus: ")
+    bus_type = str(input())
+
+    print("\nEnter fixed fare: ")
+    fixed_fare = int(input())
+    print("\nEnter variable fare: ")
+    variable_fare = int(input())
+
+    # Write data to the specified child node in FireBase real-time database
+    data = {
+        "FIXED_TICKET_PRICE": fixed_fare,
+        "VARIABLE_TICKET_PRICE": variable_fare,
+    }
+
+    db.child("BUS_FARES").child(bus_type).set(data)

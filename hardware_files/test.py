@@ -1,5 +1,6 @@
 # Author: Ashwin Raj <thisisashwinraj@gmail.com>
 # License: Creative Commons Attribution - NonCommercial - NoDerivs License
+# Discussions-to: github.com/thisisashwinraj/CroMa-Crowd-Management-System/discussions
 
 import pytest
 
