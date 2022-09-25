@@ -126,3 +126,16 @@ CroMa, & all its resources are distributed under [Creative Commons Attribution -
 Upcoming updates will include new features, optimized recommendations using AI/ML and support for other transits
 <br>
 All contributors may reproduce and share the licensed material in whole or in part for non-commercial purposes only
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://www.linkedin.com/in/thisisashwinraj/"><img src="https://avatars.githubusercontent.com/u/62590141?v=4" width="100px;" alt=""/><br /><sub><b>Ashwin Raj</b></sub></a><br /><a href="#" title="Hardware Team">:computer:</a></td>
+      <td align="center"><a href="https://www.google.com"><img src="https://ernglobal.org/wp-content/uploads/2017/10/default-user-image.png" width="100px;" alt=""/><br /><sub><b>Anjali PA</b></sub></a><br /><a href="#" title="Database Team">:computer:</a></td>
+      <td align="center"><a href="https://www.linkedin.com/in/vishnu-rk-a8b4b81b5/"><img src="https://media-exp1.licdn.com/dms/image/C4E03AQEcTmDwrsLCCw/profile-displayphoto-shrink_800_800/0/1650949192384?e=1669852800&v=beta&t=KqteebIKCRemO5ErX0zGaqZt-ilx50iSY56snUDqrkk" width="100px;" alt=""/><br /><sub><b>Vishnu RK</b></sub></a><br /><a href="#" title="Mobile Team">:computer:</a></td>
+      <td align="center"><a href="https://www.linkedin.com/in/asiya-r-ashkar-b2a053226/"><img src="https://ernglobal.org/wp-content/uploads/2017/10/default-user-image.png" width="100px;" alt=""/><br /><sub><b>Asiya R Ashkar</b></sub></a><br /><a href="#" title="Hardware Team">:computer:</a></td>
+      <td align="center"><a href="https://www.linkedin.com/in/hariharan-g-8b3071230/"><img src="https://media-exp1.licdn.com/dms/image/C4D03AQE0YFMeWQsNhQ/profile-displayphoto-shrink_800_800/0/1642942804514?e=1669852800&v=beta&t=V4seEtab_bRJaHH7TKP8MSPXNiWpsrMJ3-4jpFA48QU" width="100px;" alt=""/><br /><sub><b>Hariharan G</b></sub></a><br /><a href="#" title="Database Team">:computer:</a></td>
+      <td align="center"><a href="https://www.linkedin.com/in/devi-a-855b431b4/"><img src="https://ernglobal.org/wp-content/uploads/2017/10/default-user-image.png" width="100px;" alt=""/><br /><sub><b>Devi A</b></sub></a><br /><a href="#" title="Mobile Team">:computer:</a></td>
+    </tr>
+  </tbody>
+</table>
