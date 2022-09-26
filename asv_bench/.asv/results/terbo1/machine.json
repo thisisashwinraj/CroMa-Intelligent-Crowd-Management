@@ -1,0 +1,9 @@
+{
+    "arch": "x64",
+    "cpu": "Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz",
+    "machine": "terbo1",
+    "num_cpu": "4",
+    "os": "Windows 8.1",
+    "ram": "",
+    "version": 1
+}

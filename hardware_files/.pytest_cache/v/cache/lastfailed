@@ -1,4 +1,0 @@
-{
-  "test_main.py::test_selectBus[1-3-2-10]": true,
-  "test_main.py::test_updatePassengerCount[2-6-25]": true
-}
