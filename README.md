@@ -35,19 +35,24 @@ python ticketingMachine.py
 CroMas development take place on GitHub. Please submit any bug that you may encounter to the issue tracker with a reproducible example demonstrating the problem, in accordance with the issue template, present in contributing files
 
 ```
-├── assets
-├── android                       // Files required for running the application on an Android
-│   └── Images
-├── ios                           // The files required for running the application on an iOS
-├── macos
-├── linux
-├── lib                           // Contains main.dart which is the flutter apps entry point
-│   ├── screens                      
-│   └── main.dart          
-├── pubspec.yaml                  // Contains the metadata, configuration specific to the app
-├── web
-│   └── icons
-└── pubspecam.lock                // It contain the version of each dependencies and packages
+├── .github
+├── android                          // Files required for running the application on an Android
+│   ├── android                      
+│   └── ios
+├── assets                           // The files required for running the application on an iOS
+├── asv_bench
+├── database
+├── example                          // Contains eamples and use cases for the hardware & mobile
+├── hardware
+│   ├── main.py                      
+│   └── master                       // Contains the code for operators, including master access
+├── sphinx
+├── templates
+├── test                             // Contain sthe code for unit testing the app, and hardware
+│   ├── app                      
+│   └── hardware
+├── versions                         // Contains the ziped versions of all major stable releases          
+└── .mailmap
 ```
 
 To run the application, start debugging by clicking **Run > Start Debugging** from the main IDE window (or press F5). If you are using [VS Code](https://code.visualstudio.com/), you should see a set of Flutter specific entries in the status bar, including a [Flutter SDK](https://docs.flutter.dev/get-started/install) version and a device name (or a message displaying No Devices). The Flutter extension automatically selects the latest device connected. However, if you have multiple devices/simulators connected, click device in the status bar to see a pick-list at the top of the screen. Select the device, you want to use for running, or debugging, and finally, run this application.
@@ -117,9 +122,7 @@ git push origin main
 ```
 All pull requests are reviewed on a monthly rolling basis. Your understanding is appreciated during the review process
 
-# Data Security and Privacy
-Safegaurding your data starts with understanding how CroMa collects, and processes your personal info. The in-hand ticketing machine only collects data pertaining to the user's starting location, destination, and the total number of co-passengers. When this data is shared, all that CroMa records is that a few passengers bought ticket(s) and onboarded the bus, but it doesn't know who they exactly are. CroMa does not collect your personal data in any form. Similarly, on the mobile app's side, it does'nt require users to log-in to the application. They can simply startoff without signing up.
-
+### All Contributors
 <table>
   <tbody>
     <tr>
@@ -133,6 +136,9 @@ Safegaurding your data starts with understanding how CroMa collects, and process
     </tr>
   </tbody>
 </table>
+
+# Data Security and Privacy
+Safegaurding your data starts with understanding how CroMa collects, and processes your personal info. The in-hand ticketing machine only collects data pertaining to the user's starting location, destination, and the total number of co-passengers. When this data is shared, all that CroMa records is that a few passengers bought ticket(s) and onboarded the bus, but it doesn't know who they exactly are. CroMa does not collect your personal data in any form. Similarly, on the mobile app's side, it does'nt require users to log-in to the application. They can simply startoff without signing up.
 
 # License and Project Status
 CroMa, & all its resources are distributed under [Creative Commons Attribution - Non Commercial - No Derivs License](https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware/blob/main/LICENSE). The app is compatible with all operating systems. The latest released stable version of CroMa is v1.0.1, and is available to be used on all local system for general use through the mobile app. All releases are logged in the [~/StableVersions]()
