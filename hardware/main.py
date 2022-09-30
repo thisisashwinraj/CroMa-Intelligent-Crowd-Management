@@ -4,12 +4,12 @@
 # Discussions-to: github.com/thisisashwinraj/CroMa-Crowd-Management-System/discussions
 
 # By exercising the Licensed Rights (defined in LICENSE), You accept and agree
-# to be bound by the terms and conditions of the Creative Commons 
-# Attribution-NonCommercial-NoDerivatives 4.0 International Public License 
-# ("Public License"). To the extent this Public License may be interpreted as 
-# a contract, You are granted the Licensed Rights in consideration of Your 
-# acceptance of the terms and conditions, and the Licensor grants You such 
-# rights in consideration of benefits the Licensor receives from making the 
+# to be bound by the terms and conditions of the Creative Commons
+# Attribution-NonCommercial-NoDerivatives 4.0 International Public License
+# ("Public License"). To the extent this Public License may be interpreted as
+# a contract, You are granted the Licensed Rights in consideration of Your
+# acceptance of the terms and conditions, and the Licensor grants You such
+# rights in consideration of benefits the Licensor receives from making the
 # Licensed Material available under terms and conditions described in LICENSE.
 
 """
@@ -31,9 +31,10 @@ Included Functions:
 Read more about the working of the hardware in the :ref:`CroMa Hardware Design`
 """
 
-import bus_fares
-import database
 import terminal
+import database
+import bus_fares
+
 
 terminal.collection = 0
 terminal.crowd_manager = []
@@ -74,8 +75,8 @@ def passengers_in_bus():
     """
     Function to print the total current passenger count in the bus.
 
-    Calculates the passengers count using update_passenger_count(). 
-    After calculating the bus fare, displays this value to the user
+    Calculates the passengers count using update_passenger_count().
+    After calculating the bus fare, displays this value to the user.
 
     .. versionadded:: 1.0.1
 
@@ -191,7 +192,7 @@ def select_bus():
 def print_ticket():
     """
     Function to print ticket based on inputs from the user.
-    
+
     Reads user's origin, destination and co-passenger count to calculate the
     total busfare to be charged. The input values are then checked for their
     validity, and are then fed as arguments to the fare calculation function
@@ -297,8 +298,8 @@ def calculate_ticket_price(user_starting_point, user_destination, number_of_pass
     Function to print ticket based on inputs from the user.
 
     Uses user's origin, destination, and co-passengers count to calculate the
-    total bus fare to be charged. The fare is calculated by adding a variable 
-    charge to the mandatory fixed charge. The program is designed to increase 
+    total bus fare to be charged. The fare is calculated by adding a variable
+    charge to the mandatory fixed charge. The program is designed to increase
     the variable charges every time after crossing three succesive bus stops.
 
     Read more in the :ref:`User Installation and Working`.
@@ -316,7 +317,7 @@ def calculate_ticket_price(user_starting_point, user_destination, number_of_pass
     .. See Also:
         calculate_ticket_price()
         update_passenger_count()
-    
+
     NOTE: Additional charges (eg: Luggages), may be added as per requirements
 
     """
@@ -351,7 +352,7 @@ def trip_details():
 
     Displays route info, tickets printed, available seats, and passenger count.
     These details are updated in real-time, before being displayed to the user.
-    
+
     Note: In the upcoming versions this will include useful buskeeping records.
 
     .. versionadded:: 1.0.1
@@ -389,52 +390,50 @@ def trip_details():
 
 
 if __name__ == "__main__":
-    """
-    This is the top-level environment of the program.
-    It is the entry point of the program, and contains the boot code.
+#    This is the top-level environment of the program.
+#    It is the entry point of the program, and contains the boot code.
+#
+#    .. versionadded:: 1.0.1
+#    .. versionupdated:: 1.1.0
+#
+#    See Also:
+#        .. [1]  database.py :: connects to the FireBase real-time database
+#        .. [2]  terminal.py :: defines variables used throughout the program
+#
+#    Example:
+#        >>> Enter E-Mail:
+#        testCroMa@gmail.com
+#
+#        >>> Enter Password:
+#        **********
+#
+#        Welcome to CroMa: The Crowd Management Software
+#
+#        >>> Enter the route id:
+#        TVM_KYM_01
+#
+#        >>> Enter the bus id:
+#        KL13N
+#
+#        >>> MENU: Select an option
+#            1. Print Ticket
+#            2. Display Trip Details
+#            3. Display Collections
+#            4. Update Location
+#            5. Exit
+#        1
+#
+#        >>> Enter the Starting Point:
+#        1
+#
+#        >>> Enter the Destination:
+#        5
+#
+#        >>> Enter the no. of co-passengers:
+#        2
+#
+#        Total ticket price: 32
 
-    .. versionadded:: 1.0.1
-    .. versionupdated:: 1.1.0
-
-    See Also:
-        .. [1]  database.py :: connects to the FireBase real-time database
-        .. [2]  terminal.py :: defines variables used throughout the program
-
-    Example:
-        >>> Enter E-Mail:
-        testCroMa@gmail.com
-
-        >>> Enter Password:
-        **********
-
-        Welcome to CroMa: The Crowd Management Software
-
-        >>> Enter the route id:
-        TVM_KYM_01
-
-        >>> Enter the bus id:
-        KL13N
-
-        >>> MENU: Select an option
-            1. Print Ticket
-            2. Display Trip Details
-            3. Display Collections
-            4. Update Location
-            5. Exit
-        1
-
-        >>> Enter the Starting Point:
-        1
-
-        >>> Enter the Destination:
-        5
-
-        >>> Enter the no. of co-passengers:
-        2
-
-        Total ticket price: 32
-
-    """
     database.log_in()  # Authenticate users to allow read, write operation
 
     terminal.current_location = 1 # Set the starting loc to first bus stop
@@ -499,13 +498,13 @@ if __name__ == "__main__":
 
             # Update crowd manager value every time new tickets are printed
             update_passenger_count()
-        
-        if SELECTED_MENU_OPTION == 5:
-            print("\nDo you want to exit [Y/N]")
-            exit_trip = str(input())
 
-            # Confirm if the user wants to exit the program, & terminate sys
-            if exit_trip ==  "Y" or exit_trip == "y":
+        if SELECTED_MENU_OPTION == 5:
+            print("\nDo you want to exit [Y/N]: ")
+            END_TRIP = str(input())
+
+            # Confirm if user want to exit the program and terminate system
+            if END_TRIP in ('Y', 'y'):
                 database.exit_database_updation()
 
                 print("\nThank you for using CroMa.\n")

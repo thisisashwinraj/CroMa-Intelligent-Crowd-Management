@@ -30,9 +30,11 @@ NOTE: Firebase authentication uses e-mail/password for authentication of users
 Read more about the database used in CroMa in the :ref:`CroMa Hardware Database`
 """
 
-import pyrebase
+# pylint: disable=unsubscriptable-object
+
+import pyrebase # pylint: disable=import-error
 import terminal
-import credentials
+import credentials # pylint: disable=import-error
 
 
 def log_in():
@@ -86,9 +88,9 @@ def log_in():
         # RefreshToken to avoid stale tokens, idToken expires after 1 hour
         user = auth.refresh(user["refreshToken"])
 
-    except:
+    except Exception as exc:
         print("\nYour E-Mail Id or Password is wrong. Try Again!\n")
-        raise SystemExit(0)
+        raise SystemExit(0) from exc
 
 
 def initialize_real_time_crowd_database():
@@ -111,7 +113,7 @@ def initialize_real_time_crowd_database():
         None
         Creates a new node in the FireBase database
 
-    Important:
+    Warning:
         If a node with same name exists, the values of the node are reset.
 
     NOTE: User needs to be authenticated for performing the initialize operation
@@ -131,7 +133,7 @@ def initialize_real_time_crowd_database():
 
     # Initialize connection with FireBase database & set reference variable
     firebase = pyrebase.initialize_app(firebase_config)
-    db = firebase.database()
+    _db = firebase.database()
 
     # Write data to the specified child node in FireBase real-time database
     data = {
@@ -149,7 +151,7 @@ def initialize_real_time_crowd_database():
     # RefreshToken to avoid stale tokens, idToken expires after 1 hour
     user = auth.refresh(user["refreshToken"])
 
-    db.child(terminal.bus_id).set(data, user["idToken"])
+    _db.child(terminal.bus_id).set(data, user["idToken"])
 
 
 def update_real_time_crowd_database():
@@ -191,7 +193,7 @@ def update_real_time_crowd_database():
     firebase = pyrebase.initialize_app(firebase_config)
 
     auth = firebase.auth()
-    db = firebase.database()
+    _db = firebase.database()
 
     # Authenticate the user to perform CRUD operations on the database
     user = auth.sign_in_with_email_and_password(
@@ -201,7 +203,7 @@ def update_real_time_crowd_database():
     user = auth.refresh(user["refreshToken"])
 
     # Write data to the specified child node in FireBase real-time database
-    db.child(terminal.bus_id).update(
+    _db.child(terminal.bus_id).update(
         {
             "current_location": terminal.selected_route[terminal.current_location - 1],
             "passengersInBus": terminal.current_passenger_count,
@@ -244,10 +246,10 @@ def fetch_route(route_id):
 
     # Initialize connection with FireBase database & set reference variable
     firebase = pyrebase.initialize_app(firebase_config)
-    db = firebase.database()
+    _db = firebase.database()
 
     # Fetches the list of bus stops from the route pointed by input route_id
-    route = db.child(route_id).child("stops").get()
+    route = _db.child(route_id).child("stops").get()
     return route.val()
 
 
@@ -284,10 +286,10 @@ def fetch_bus_type(bus_id):
 
     # Initialize connection with FireBase database & set reference variable
     firebase = pyrebase.initialize_app(firebase_config)
-    db = firebase.database()
+    _db = firebase.database()
 
     # Fetch the bus_type for that bus, with the bus_id specified by the input
-    bus_type = db.child(bus_id).child("type").get()
+    bus_type = _db.child(bus_id).child("type").get()
     return bus_type.val()
 
 
@@ -324,10 +326,10 @@ def fetch_total_seats(bus_id):
 
     # Initialize connection with FireBase database & set reference variable
     firebase = pyrebase.initialize_app(firebase_config)
-    db = firebase.database()
+    _db = firebase.database()
 
     # Fetch the totalSeat for the bus with the bus_id specified by the input
-    total_seats = db.child(bus_id).child("total seats").get()
+    total_seats = _db.child(bus_id).child("total seats").get()
     return total_seats.val()
 
 
@@ -367,12 +369,12 @@ def exit_database_updation():
 
     # Initialize connection with FireBase database & set reference variable
     firebase = pyrebase.initialize_app(firebase_config)
-    db = firebase.database()
+    _db = firebase.database()
 
     try:
         # Fetch the current lifetime passenger count for the input route_id
         current_lifetime_passenger_count = (
-            db.child(terminal.route_id).child("lifetime passenger count").get()
+            _db.child(terminal.route_id).child("lifetime passenger count").get()
         )
 
         # Update lifetime passenger count for the input route_id in routeDB
@@ -381,15 +383,15 @@ def exit_database_updation():
             terminal.total_tickets_printed
         )
 
-        db.child(terminal.route_id).update(
+        _db.child(terminal.route_id).update(
             {
                 "lifetime passenger count": lifetime_passenger_count,
             }
         )
 
-    except:
+    except Exception as exc:
         print("\nUnable to update routes database")
-        raise SystemExit(0)
+        raise SystemExit(0) from exc
 
     firebase_config = {
         "apiKey": credentials.BUS_API_KEY,
@@ -402,25 +404,25 @@ def exit_database_updation():
         "databaseURL": credentials.BUS_DATABASE_URL,
     }
 
-    # Initialize connection with FireBase database & set reference variable
+    # Initialize connection with FireBase database, and set reference variable
     firebase = pyrebase.initialize_app(firebase_config)
-    db = firebase.database()
+    _db = firebase.database()
 
     try:
         # Fetch the current trip count for the input bus from the bus database
-        current_trip_count = db.child(
+        current_trip_count = _db.child(
             terminal.bus_id).child("trip count").get()
 
         # Update lifetime trip count for the input bus_id, in the bus database
         lifetime_trip_count = int(current_trip_count) + \
             terminal.total_tickets_printed
 
-        db.child(terminal.bus_id).update(
+        _db.child(terminal.bus_id).update(
             {
                 "trip count": lifetime_trip_count,
             }
         )
 
-    except:
+    except Exception as exc:
         print("\nUnable to update bus database")
-        raise SystemExit(0)
+        raise SystemExit(0) from exc
