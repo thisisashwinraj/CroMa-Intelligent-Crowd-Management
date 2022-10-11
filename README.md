@@ -91,7 +91,7 @@ The application uses Maps SDK to display the dynamic in-app map interface. The D
 # Contribution Guidelines
 To start contributing to the project, clone the repository into your local system subdirectory using the below git code:
 ```
-git clone https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware.git
+git clone https://github.com/thisisashwinraj/CroMa-Crowd-Management-System.git
 ```
 Before cloning the repository, make sure to navigate to the working subdirectory of your command line interface and ensure that no folder with same name exists. Other ways to clone the repository includes using a password protected [SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), or by using [Git CLI](https://cli.github.com/). The changes may additionally be performed by opening this repo using GitHub Desktop
 
