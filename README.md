@@ -25,7 +25,7 @@ The hand-held ticketing machine is a micro-controller-based system used for gene
 
 The passengers data is maintained in the FireBase Real-Time database for synchronizing this data across devices. This data is structured as a JSON tree with the data points stored as JSON objects. The parent nodes represents the Bus Id (unique to each bus) and the real-time data associated with the bus (including available seats, & current location, etc) are maintained as nested nodes. Whenever a new ticket is issued the database is updated. The algorithm ensures that the database is updated when passengers de-board the bus. The data maintained in this [FireBase RT database](https://firebase.google.com/products/realtime-database) is then made available to be fetched by the android mobile application, and the relevant machine learning models, and API's.
 
-<p align  = "justify">
+<p align = "justify">
 The android app is the end-user's application that allows the user to compare various transit options, and choose the most ideal option that fits their needs. The users, start with opening the application, and making a query, by entering their starting point, intended destination, and the type of bus (fast, SPF, express, deluxe, etc). No LogIn is required for using the android mobile app. The application looks up into the data base, and displays the location of buses in real-time within a pre set radius that passes through both their starting point and the destination entered by the user. The bus markers with red colour indicates heavy rush, while the green color indicates light occupancy. On tapping a given bus marker, the application displays more details about that bus to the users including, their estimated time of arrival, seat occupancy & ETA of buses on same route etc. Users can compare multiple options to make an informed decision.
 </p>
 
@@ -78,6 +78,7 @@ Vartika is a seven month pregnant women who needs to board a long distance bus w
 If Vartika uses CroMa, for checking the buses in her proximity with less occupancy, then she can make an intelligent choice of the bus she wants to board, & can grab a seat, without needing to worry about standing for long.
 
 ### The Logic that Powers the System
+<p align="justify">
 The system's hardware cycle starts with the bus conductor initializing a new trip in the handheld ticketing machine by entering the Bus Id. This machine is now configured to the routes associated with that Bus Id, and reflects the pre-set values for necessary passenger data variables, that are: total number of available seats, the current location, and total number of passengers in bus. The ticketing machine now shows options for printing the tickets, displaying trip details (used by conductors), and showing the total fare collections, during the trip. More options will be added in the future.
 
 When new passenger boards this bus, the bus conductor issues them a bus ticket after collecting informations about their point of origin, intended destination & the total number of copassengers, if any. Apart from printing tickets, the proposed ticketing machine sends this data to the FireBase real-time database, wherein, the values for the previously mentioned three parameters are updated. Bus's location data are collected by the GPS module. For passengers using concession cards, a QR code scanner is used. This ensures authenticity of the card holder, & proper updation of data.
@@ -89,7 +90,8 @@ While developing this software, we have assumed that the bus fares will increase
 The passengers waiting for onboarding the bus can open the CroMa application on their mobile device. They need to initialize this application by posting a query, entering their destination, on-boarding point, and the required bus type. This app then fetches the list of all near-by buses, that passes through their current location and destination from the firebase real time databse, and displays it to the user. The user can select a given bus to view more information about that bus including the available number of seats, crowd levels in that bus, timings for buses with similar routes & fare.
 
 The application uses Maps SDK to display the dynamic in-app map interface. The Directions API displays information on directions of buses, featuring real-time traffic information. The Distance Matrix API are used to calculate the travel time and distances between the origins, and the destinations. The  Geocoding APIs from Maps SDK is used to convert coordinates into addresses & addresses into coordinates. Places SDK integrates place details, search & autocomplete.
-
+<p align = "justify">
+  
 # Contribution Guidelines
 To start contributing to the project, clone the repository into your local system subdirectory using the below git code:
 ```
