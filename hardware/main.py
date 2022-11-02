@@ -34,6 +34,7 @@ Read more about the working of the hardware in the :ref:`CroMa Hardware Design`
 import terminal
 import database
 import bus_fares
+import mathematica
 
 
 terminal.collection = 0
