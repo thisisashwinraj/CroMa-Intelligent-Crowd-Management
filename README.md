@@ -27,7 +27,7 @@ The hand-held ticketing machine is a micro-controller-based system used for gene
 The passengers data is maintained in the FireBase Real-Time database for synchronizing this data across devices. This data is structured as a JSON tree with the data points stored as JSON objects. The parent nodes represents the Bus Id (unique to each bus) and the real-time data associated with the bus (including available seats, & current location, etc) are maintained as nested nodes. Whenever a new ticket is issued the database is updated. The algorithm ensures that the database is updated when passengers de-board the bus. The data maintained in this [FireBase RT database](https://firebase.google.com/products/realtime-database) is then made available to be fetched by the android mobile application, and the relevant machine learning models, and API's.
 
 <p align = "justify">
-The android app is the end-user's application that allows the user to compare various transit options, and choose the most ideal option that fits their needs. The users, start with opening the application, and making a query, by entering their starting point, intended destination, and the type of bus (fast, SPF, express, deluxe, etc). No LogIn is required for using the android mobile app. The application looks up into the data base, and displays the location of buses in real-time within a pre set radius that passes through both their starting point and the destination entered by the user. The bus markers with red colour indicates heavy rush, while the green color indicates light occupancy. On tapping a given bus marker, the application displays more details about that bus to the users including, their estimated time of arrival, seat occupancy & ETA of buses on same route etc. Users can compare multiple options to make an informed decision.
+The android app is the end-user's application that allows the user to compare various transit options, and choose the most ideal option that fits their needs. The users, start with opening the application, and making a query, by entering their starting point, intended destination, and the type of bus (fast, SPF, express, deluxe, etc). No LogIn is required for using the android mobile app. The application looks up into the data base, and displays the location of buses in real-time within a pre set radius that passes through both their starting point and the destination entered by the user. The bus markers with red colour indicates heavy rush, while the green color indicates light occupancy. On tapping a given bus marker, the application displays more details about that bus to the users including, their estimated time of arrival, seat occupancy & ETA of buses on same route etc. Users can compare multiple options to make an informed decision
 </p>
 
 To run the ticketing machine's sofware on a local computer, open the terminal, install [pyrebase](https://pypi.org/project/Pyrebase/), & type the command:
@@ -62,15 +62,15 @@ To run the application, start debugging by clicking **Run > Start Debugging** fr
 
 # CroMa - Under the Hood
 
-The software project aims to use human-centric technology to take public transportation & crowd manangement one step ahead. We used [Rapid Application Development model](https://en.wikipedia.org/wiki/Rapid_application_development) (RAD) to design several firmware components developed simultaneously, as if they were smaller individual projects. These are then assembled into the main working prototype.
+The software project aims to use human-centric technology to take public transportation & crowd manangement one step ahead. We used [Rapid Application Development model](https://en.wikipedia.org/wiki/Rapid_application_development) (RAD) to design several firmware components developed simultaneously as if they were smaller individual projects. These are then assembled into the main working prototype.
 
 ### Defining the Problem Statements
 
 **Problem  Statement 1:** 
-Ramesh is a busy executive who needs to reach his office on time and decide whether to take a public bus for commuting or use his personal vehicle because he stays far away from the office & want to save money
+Ramesh is a busy executive who needs to reach his office on time and decide whether to take a public bus for commuting or use his personal vehicle as he stays very far away from the office & want to save money
 <br>
 **Hypothesis:**
-If Ramesh uses CroMa for tracking the public buses available at his nearest bus-stop then he can plan his shuttle accordingly, & will reach his desired location at time, without needing to travel in an alternate public transport.
+If Ramesh uses CroMa for tracking the public buses available at his nearest bus-stop then he can plan his shuttle accordingly & will reach his desired location at time, without needing to travel in an alternate public transport.
 
 **Problem Statement 2:**
 Vartika is a seven month pregnant women who needs to board a long distance bus with ample seats available because she is agoraphobic, and her physical conditions does'nt allow her to stand for longer duration
@@ -143,12 +143,12 @@ All pull requests are reviewed on a monthly rolling basis. Your understanding is
 </table>
 
 # Data Security and Privacy
-Safegaurding your data starts with understanding how CroMa collects, and processes your personal info. The in-hand ticketing machine only collects data pertaining to the user's starting location, destination, and the total number of co-passengers. When this data is shared, all that CroMa records is that a few passengers bought ticket(s) and onboarded the bus, but it doesn't know who they exactly are. CroMa does not collect your personal data in any form. Similarly, on the mobile app's side, it does'nt require users to log-in to the application. They can simply startoff without signing up.
+Safegaurding your data starts with understanding how CroMa collects, and processes your personal info. The in-hand ticketing machine only collects data pertaining to the user's starting location, destination, and the total number of co-passengers. When this data is shared, all that CroMa records is that a few passengers bought ticket(s) and onboarded the bus, but it doesn't know who they exactly are. CroMa does not collect your personal data in any form. Similarly on the mobile app's side, it does'nt require users to log-in to the application. They can simply startoff without signing up.
 
 The Firebase database are secured by means of firebase rules. The Firebase rules ensure that only authenticated users are allowed to manipulate the data. This includes real time passenger data collected by a given bus during its journey
 
 # License and Project Status
-CroMa, & all its resources are distributed under [Creative Commons Attribution - Non Commercial - No Derivs License](https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware/blob/main/LICENSE). The app is compatible with all operating systems. The latest released stable version of CroMa is v1.0.1, and is available to be used on all local system for general use through the mobile app. All releases are logged in the [~/StableVersions]()
+CroMa & all its resources are distributed under [Creative Commons Attribution - Non Commercial - No Derivs License](https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware/blob/main/LICENSE). The app is compatible with all operating systems. The latest released stable version of CroMa is v1.0.1, and is available to be used on all local system for general use through the mobile app. All releases are logged in the [~/StableVersions]()
 
 Upcoming updates will include new features, optimized recommendations using AI/ML and support for other transits
 <br>
