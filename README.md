@@ -33,7 +33,7 @@ The android app is the end-user's application that allows the user to compare va
 
 To run the ticketing machine's sofware on a local computer, open the terminal, install [pyrebase](https://pypi.org/project/Pyrebase/), & type the command:
 ```
-python ticketingMachine.py
+python hardware/ticketingMachine.py
 ```
 
 CroMas development take place on GitHub. Please submit any bug that you may encounter to the issue tracker with a reproducible example demonstrating the problem, in accordance with the issue template, present in contributing files
