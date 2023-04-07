@@ -1,3 +1,4 @@
+/* 
 # Author: Ashwin Raj <thisisashwinraj@gmail.com>
 # License: Creative Commons Attribution - NonCommercial - NoDerivs License
 # Discussions-to: github.com/thisisashwinraj/CroMa-Crowd-Management-System/discussions
@@ -9,25 +10,15 @@
 # a contract, You are granted the Licensed Rights in consideration of Your
 # acceptance of the terms and conditions, and the Licensor grants You such
 # rights in consideration of benefits the Licensor receives from making the
-# Licensed Material available under terms and conditions described in LICENSE.
+# Licensed Material available under terms and conditions described in LICENSE
+*/
 
-"""
-This module contains the pricing parameters for decising fares.
-To update the bus fares, simply  update the value of these parameters
+/* 
+Select all <button> elements that are the descendants of a <div> element
+with class "stButton" that itself is a descendant of a <section> element
+with attribute data-testid="stSidebar" and then set their width to 304px.
+*/
 
-Fare Calculation Variables:
-    [1] Fixed Ticket Price
-    [2] Variable Ticket Price
-
-.. versionadded:: 1.0.1
-.. versionupdated:: 1.1.0
-
-NOTE: The fixed price and variable price changes as per the selected bus type
-Read more about ticket pricing in the :ref:`Fare Calculation & Pricing Model`.
-"""
-
-# Minimum cost charged for the first three stops
-FIXED_TICKET_PRICE = 10
-
-# Succesived additinal costs charged for crossing every next three stops
-VARIABLE_TICKET_PRICE = 6
+section[data-testid="stSidebar"] div.stButton button {
+    width: 304px;
+}
