@@ -21,8 +21,10 @@ Categories of Variables:
     [3] Database Fetched - These variables reflect values read from database.
     [4] Alert - Warning to raise system flag alerts during execution
     [5] Calculated - Value is calculated at runtime during execution
+    [6] Counter - Value to maintain count of iteration for logical computations
 
 .. versionadded:: 1.2.0
+.. versionupdated:: 1.3.0
 
 NOTE: At runtime values of all of these variables are set to system defaults.
 """
@@ -62,9 +64,9 @@ MAX_BOARDING_BUS_STOP = " "
 # [Calculated] Bus stop where the maximum passengers deboarded the bus
 MAX_DEBOARDING_BUS_STOP = " "
 # [User Input] Number of passengers boarding the bus at each stop
-boarding_tracker = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+boarding_tracker = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 # [User Input] Number of passengers deboarding the bus at each stop
-deboarding_tracker = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+deboarding_tracker = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 # [Calculated] Value to disable firebase re-initialization
 count = 0
@@ -74,19 +76,21 @@ report_location = " "
 # [Dynamic] Amount collected as fare during the trip. Default value set to 0
 collection = 0
 # [Dynamic] An array of 0s of length(selected_route) managing crowd information
-crowd_manager = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+crowd_manager = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 # [Dynamic] Total number of co-passengers while printing the ticket
 passenger_count = 0
 # [User Input] Numerical encoded form of the selected route
 selected_route = 0
 # [Dynamic] Total tickets printed throughout the trip. Default value set to 0
 total_tickets_printed = 0
+
 # [Alert] General warning flag for alerting the user
 warning_flag = False
 # [Alert] Warning to alert the user if the origin and destination are the same
 same_starting_and_destination_location_warning_flag = False
 # [Alert] Warning to alert the user if the destination has already been crossed
 wrong_destination_warning_flag = False
+
 # [Calculated] Total number of passengers who boarded the bus throughout the journey
 total_trip_passenger_count = 0
 # [Calculated] Total number of passengers who boarded the bus throughout the journey
@@ -111,3 +115,8 @@ br_bug_description = " "
 br_uploaded_files = None
 # [User Input] Body of the mail to be printed in the bug report
 br_mail_body = " "
+
+# [Counter] Counter for initializing firebase sdk for the ticketing machine
+initialize_firebase_sdk_ticketing_machine = 0
+# [Counter] Counter for initializing firebase sdk for the user application
+initialize_firebase_sdk_user_application = 0

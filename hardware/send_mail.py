@@ -19,13 +19,13 @@ at port 587 for sending the mails with MIMEBase payloads, and base64 attachments
 
 Included Functions:
     [1] DSR_Mail
-        [a] send_dsr_mail()
+        [a] send_dsr_mail
     [2] BugReportMail
-        [a] send_bug_report_mail()
+        [a] send_bug_report_mail
 
 .. versionadded:: 1.2.0
 
-Read more about the usecase of email triggering in :ref:`CroMa Reports and mails`
+Read more about the usecase of mail triggering in :ref:`Bus Reports and E-mails`
 """
 
 import smtplib
@@ -38,8 +38,8 @@ from email.mime.base import MIMEBase
 from email import encoders
 from email.mime.application import MIMEApplication
 
-import terminal
-import credentials  # pylint: disable=import-error
+from hardware import terminal
+from hardware import credentials  # pylint: disable=import-error
 
 
 class DSRMail:  # pylint: disable=too-few-public-methods
@@ -57,6 +57,7 @@ class DSRMail:  # pylint: disable=too-few-public-methods
     manager) using the smtp.gmail.com server at port 587 alongside all the payloads.
 
     .. versionadded:: 1.2.0
+    .. versionupdated:: 1.3.0
 
     NOTE: During actual trips, the DSR reports are generated and mailed to the admin
     """
@@ -64,7 +65,7 @@ class DSRMail:  # pylint: disable=too-few-public-methods
     # Set the receiver e-mail id as the administrator's e-mail id
     terminal.RECEIVER_EMAIL_ID = "rajashwin812@gmail.com"
 
-    def send_dsr_mail(self):
+    def send_dsr_mail(self, bus_id):
         """
         Method to send a DSR (Daily Status Report) mail with an attachment to the admin
 
@@ -72,6 +73,7 @@ class DSRMail:  # pylint: disable=too-few-public-methods
         the smtp.gmail.com server at port 587 along with a PDF attachment, as a payload.
 
         .. versionadded:: 1.2.0
+        .. versionupdated:: 1.3.0
 
         Parameters:
             None -> All variables are read from the system memory as per configruations
@@ -94,12 +96,12 @@ class DSRMail:  # pylint: disable=too-few-public-methods
         )  # Cast the date as string
 
         # Store the subject of the email with timestamp in the mail's subject field
-        email["Subject"] = terminal.bus_id + "DSR Report " + str(todays_date_time)
+        email["Subject"] = bus_id + " DSR Report " + str(todays_date_time)
 
         # Store the body of the mail in the function variable named body
         body = (
             "Hello,\n\nPlease find attached the DSR Report for Bus Id: "
-            + terminal.bus_id
+            + bus_id
             + "'s journey as on "
             + todays_date_time
             + ".\n\nThanks,\nCroMa Support Team"
@@ -108,14 +110,18 @@ class DSRMail:  # pylint: disable=too-few-public-methods
         email.attach(MIMEText(body, "plain"))  # Attach the body with the email instance
 
         filename = "DSR_Report.pdf"  # open the file to be sent in the filename variable
-        attachment = open("hardware/reports/DSR_Report.pdf", "rb")  # pylint: disable=consider-using-with
+        attachment = open(
+            "hardware/reports/DSR_Report.pdf", "rb"
+        )  # pylint: disable=consider-using-with
 
         # Create an instance of MIMEBase and named as payload
         payload = MIMEBase("application", "octet-stream")
         payload.set_payload((attachment).read())  # Change the payload into encoded form
 
         encoders.encode_base64(payload)  # Encode the payload into base-64 form
-        payload.add_header("Content-Disposition", "attachment; filename= %s" % filename)  # pylint: disable=consider-using-f-string
+        payload.add_header(
+            "Content-Disposition", "attachment; filename= %s" % filename
+        )  # pylint: disable=consider-using-f-string
 
         email.attach(payload)  # Attach the instance 'payload' to the instance 'email'
 
@@ -211,7 +217,9 @@ class BugReportMail:  # pylint: disable=too-few-public-methods
                 attachment.read()  # pylint: disable=no-member
             )  # Read the attachment using read method
             att.add_header(
-                "Content-Disposition", "attachment", filename=attachment.name  # pylint: disable=no-member
+                "Content-Disposition",
+                "attachment",
+                filename=attachment.name,  # pylint: disable=no-member
             )
             message.attach(att)  # Attach the file to the email
 

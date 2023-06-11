@@ -1,4 +1,5 @@
-### **CroMa Real-Time Database**
+### **CroMa Real-Time Database Rules**
+
 ```
 {
   "rules": {

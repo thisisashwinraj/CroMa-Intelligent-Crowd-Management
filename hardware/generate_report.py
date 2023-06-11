@@ -25,6 +25,7 @@ Included Classes and Methdds:
         [e] print_signature_and_date
 
 .. versionadded:: 1.2.0
+.. versionupdated:: 1.3.0
 
 Read more about the use case of CroMa reports in :ref:`CroMa Reports and Analytics`
 """
@@ -32,7 +33,7 @@ import random
 from datetime import date
 from fpdf import FPDF
 
-import terminal
+from hardware import terminal
 
 
 class DSRReport(FPDF):
@@ -86,7 +87,8 @@ class DSRReport(FPDF):
         # Print the organization's logo image the specified width and height
         self.image(image_loc, link="", type="", w=1586 / 30, h=1920 / 200)
 
-    def print_basic_details(self):
+
+    def print_basic_details(self, bus_id, route_id):
         """
         Method to print basic details like BusId, Bus Route, Driver Id and Reference No.
 
@@ -95,6 +97,7 @@ class DSRReport(FPDF):
         attributes & the terminal module variables to retrieve the required information.
 
         .. versionadded:: 1.2.0
+        .. versionupdated:: 1.3.0
 
         Parameters:
             [class object] self -> Values are read from the memory as per configruation
@@ -112,7 +115,7 @@ class DSRReport(FPDF):
         # Code block to display the value for Bus Id
         self.set_xy(30.0, 40.0)  # Set x-y position for displaying the Bus Id
         self.set_font("Arial", "", 12)  # Set the font style for Bus Id
-        self.cell(w=10, h=10, align="C", txt=terminal.bus_id, border=0)  # Print value
+        self.cell(w=10, h=10, align="C", txt=bus_id, border=0)  # Print value
 
         # Code block to display the label for Bus Route
         self.set_xy(19.0, 48.0)  # Set x-y position for displaying the Bus Route label
@@ -122,9 +125,7 @@ class DSRReport(FPDF):
         # Code block to display the value for Bus Route
         self.set_xy(54.0, 48.0)  # Set x-y position for displaying the Bus Route
         self.set_font("Arial", "", 12)  # Set the font style for Bus Route
-        self.cell(
-            w=10, h=10, align="C", txt=terminal.bus_route, border=0
-        )  # Print value
+        self.cell(w=10, h=10, align="C", txt=route_id, border=0)  # Print value
 
         # Code block to display the label for Driver Id
         self.set_xy(154.0, 48.0)  # Set x-y position for displaying the Driver Id label
@@ -178,6 +179,7 @@ class DSRReport(FPDF):
         self.set_font("Arial", "", 12)  # Set the font style for Conductor Id
         self.cell(w=10, h=10, align="C", txt="KSR14C213D", border=0)  # Print value
 
+
     def create_table(self):
         """
         Method to print an empty table with five columns, and one row in the DSR report.
@@ -206,6 +208,7 @@ class DSRReport(FPDF):
         self.line(123.3, 80.0, 123.3, 105.0)  # Draw vertical line that separates column
         self.line(159.8, 80.0, 159.8, 105.0)  # Draw vertical line that separates column
 
+
     def print_table_content(self):
         """
         This method prints important trip details, such as load factor on the PDF report.
@@ -215,6 +218,7 @@ class DSRReport(FPDF):
         PDF page using the set_xy() function, and the cell() functions of the FPDF class.
 
         .. versionadded:: 1.2.0
+        .. versionupdated:: 1.3.0
 
         Parameters:
             [class object] self -> Values are read from the memory as per configruations
@@ -313,6 +317,7 @@ class DSRReport(FPDF):
         self.cell(
             w=10, h=10, align="C", txt=str(terminal.MAX_DEBOARDING_BUS_STOP), border=0
         )  # Print max deboarding value
+
 
     def print_signature_and_date(self):
         """
