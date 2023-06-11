@@ -53,7 +53,6 @@ import firebase_admin
 from firebase_admin import credentials
 
 from bokeh.models.widgets import Div
-from streamlit_star_rating import st_star_rating
 
 
 # Set the title and favicon for the streamlit web application
