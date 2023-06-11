@@ -30,7 +30,6 @@ Included Functions:
 Read more about the functionality of hardware in :ref:`CroMa - Ticketing Machine`
 """
 
-import randompip 
 import time
 import streamlit as st
 import pandas as pd
