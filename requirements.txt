@@ -89,7 +89,6 @@ httplib2==0.21.0
 httpx==0.23.3
 huggingface-hub==0.13.4
 idna==3.4
-importlib-metadata==6.0.0
 inflection==0.5.1
 isodate==0.6.1
 itsdangerous==2.1.2
@@ -212,4 +211,3 @@ WTForms==3.0.1
 xyzservices==2023.2.0
 yarg==0.1.9
 yarl==1.8.2
-zipp==3.12.0
