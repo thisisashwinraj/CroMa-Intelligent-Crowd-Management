@@ -52,8 +52,6 @@ from hardware import application_support_dictionary
 import firebase_admin
 from firebase_admin import credentials
 
-from bokeh.models.widgets import Div
-
 
 # Set the title and favicon for the streamlit web application
 st.set_page_config(
