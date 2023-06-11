@@ -128,21 +128,6 @@ git push origin main
 ```
 All pull requests are reviewed on a monthly rolling basis. Your understanding is appreciated during the review process
 
-### All Contributors
-<table>
-  <tbody>
-    <tr>
-      <td align="center"><a href="https://www.linkedin.com/in/thisisashwinraj/"><img src="https://avatars.githubusercontent.com/u/62590141?v=4" width="100px;" alt=""/><br /><sub><b>Ashwin Raj</b></sub></a><br /><a href="#" title="Hardware Team">:computer:</a></td>
-      <td align="center"><a href="https://www.google.com"><img src="https://lh3.googleusercontent.com/drive-viewer/AJc5JmTj-nbO8zR4gGO-k8PPMaJk84plUgJCwiuJe3MoNM8l0SqzVtNpkh1sMXNxyZzVYKmfudguLe8=w1366-h597" width="100px;" alt=""/><br /><sub><b>Anjali PA</b></sub></a><br /><a href="#" title="Database Team">:computer:</a></td>
-      <td align="center"><a href="https://www.linkedin.com/in/vishnu-rk-a8b4b81b5/"><img src="https://media-exp1.licdn.com/dms/image/C4E03AQEcTmDwrsLCCw/profile-displayphoto-shrink_800_800/0/1650949192384?e=1669852800&v=beta&t=KqteebIKCRemO5ErX0zGaqZt-ilx50iSY56snUDqrkk" width="100px;" alt=""/><br /><sub><b>Vishnu RK</b></sub></a><br /><a href="#" title="Mobile Team">:computer:</a></td>
-      <td align="center"><a href="https://www.linkedin.com/in/asiya-r-ashkar-b2a053226/"><img src="https://ernglobal.org/wp-content/uploads/2017/10/default-user-image.png" width="100px;" alt=""/><br /><sub><b>Asiya R Ashkar</b></sub></a><br /><a href="#" title="Hardware Team">:computer:</a></td>
-      <td align="center"><a href="https://www.linkedin.com/in/hariharan-g-8b3071230/"><img src="https://media-exp1.licdn.com/dms/image/C4D03AQE0YFMeWQsNhQ/profile-displayphoto-shrink_800_800/0/1642942804514?e=1669852800&v=beta&t=V4seEtab_bRJaHH7TKP8MSPXNiWpsrMJ3-4jpFA48QU" width="100px;" alt=""/><br /><sub><b>Hariharan G</b></sub></a><br /><a href="#" title="Database Team">:computer:</a></td>
-      <td align="center"><a href="https://www.linkedin.com/in/devi-a-855b431b4/"><img src="https://lh3.googleusercontent.com/drive-viewer/AJc5JmSnPSxBCQHfrYmBlNMp22x5LVVQGxUMitJ3qXtKn4GquO67cP164skL7Ye4_FkI4iILsDZ4jAQ=w1366-h597" width="100px;" alt=""/><br /><sub><b>Devi A</b></sub></a><br /><a href="#" title="Mobile Team">:computer:</a></td>
-      <td align="center"><a href="https://www.google.com"><img src="https://ernglobal.org/wp-content/uploads/2017/10/default-user-image.png" width="100px;" alt=""/><br /><sub><b>Vishnu Vinod</b></sub></a><br /><a href="#" title="Database Team">:computer:</a></td>
-    </tr>
-  </tbody>
-</table>
-
 # Data Security and Privacy
 Safegaurding your data starts with understanding how CroMa collects, and processes your personal info. The in-hand ticketing machine only collects data pertaining to the user's starting location, destination, and the total number of co-passengers. When this data is shared, all that CroMa records is that a few passengers bought ticket(s) and onboarded the bus, but it doesn't know who they exactly are. CroMa does not collect your personal data in any form. Similarly on the mobile app's side, it does'nt require users to log-in to the application. They can simply startoff without signing up.
 
