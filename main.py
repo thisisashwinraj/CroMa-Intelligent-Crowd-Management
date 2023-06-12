@@ -734,14 +734,6 @@ if route_id != "Select Route Id" and bus_id != "Select Bus Id":
             bus_id
         )  # Refresh the database with the default values
 
-        # Set the firebase values to the default values
-        firebase_database.update_current_bus_status(
-            bus_id, "Inactive"
-        )  # Set as Inactive
-        firebase_database.update_current_route_id(
-            bus_id, "Route00"
-        )  # Route00 is the default route id
-
         terminal.collection = terminal.load_factor = 0  # Reset colection & load_factor
 
         # Reset crowd manager, boarding tracker and deboarding tracker to defaults

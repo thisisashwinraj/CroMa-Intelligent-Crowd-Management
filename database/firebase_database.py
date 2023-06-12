@@ -114,6 +114,7 @@ def refresh_database(bus_id):
             "current_bus_status": "Inactive",
             "current_route_id": "Route00",
             "delay_in_mins": 0,
+            "last_stop_arrival_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }
     )
 
