@@ -466,14 +466,6 @@ if route_id != "Select Route Id" and bus_id != "Select Bus Id":
         st.warning("Starting location can not be same as destination", icon="⚠️")
         flag_bus_user_location_mismatch = True
 
-    # Check if the current location is behind user's boarding point
-    elif current_location < starting_location:
-        # Display warning and set same_starting_and_destination_location to True
-        st.warning(
-            "The boarding point cannot be ahead of bus's current location", icon="⚠️"
-        )
-        flag_bus_user_location_mismatch = True
-
     # Set same_starting_and_destination_location flag to False if not same
     else:
         flag_bus_user_location_mismatch = False
@@ -485,10 +477,22 @@ if route_id != "Select Route Id" and bus_id != "Select Bus Id":
     # Fetch numerical value corresponding to user's dropping point
     user_destination = bus_stops.index(destination_location) + 1
 
+    # Check if the current location is behind user's boarding point
+    if bus_current_location < user_starting_point:
+        # Display warning and set same_starting_and_destination_location to True
+        st.warning(
+            "The boarding point cannot be ahead of bus's current location", icon="⚠️"
+        )
+        flag_user_location_ahead_of_bus_location = True
+
+    # Set same_starting_and_destination_location flag to False if not same
+    else:
+        flag_user_location_ahead_of_bus_location = False
+
     # Determine if the bus has already passed the user-provided destination
     if bus_current_location > user_destination:
         # Set the warning & flag indicating destination to be behind current location
-        st.warning("The bus has already crossed the selected destination", icon="⚠️")
+        st.warning("Bus has already crossed the selected destination", icon="⚠️")
         flag_destination_behind_current_location = True
 
     # Set the destination_behind_current_location attribute to False if not behind
@@ -497,7 +501,7 @@ if route_id != "Select Route Id" and bus_id != "Select Bus Id":
 
     if user_starting_point > user_destination:
         # Set the warning & flag indicating destination to be behind current location
-        st.warning("The destination cannot be behind the boarding point", icon="⚠️")
+        st.warning("Destination cannot be behind the boarding point", icon="⚠️")
         flag_destination_behind_boarding_point = True
 
     # Set the destination_behind_current_location attribute to False if not behind
@@ -520,6 +524,7 @@ if route_id != "Select Route Id" and bus_id != "Select Bus Id":
         flag_destination_behind_current_location
         or flag_bus_user_location_mismatch
         or flag_destination_behind_boarding_point
+        or flag_user_location_ahead_of_bus_location
     )  # Returns True if any warning is flagged, else returns False
 
     # Prompt the user to print tickets if no warning flags are marked True
