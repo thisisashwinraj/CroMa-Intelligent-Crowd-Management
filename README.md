@@ -66,7 +66,7 @@ CroMas development take place on [GitHub](https://github.com/thisisashwinraj/Cro
 └── .mailmap
 ```
 
-<p align='justify'>To run the application, start debugging by clicking <B>Run > Start Debugging</B> from the main IDE window (or press F5). If you are using <a href='https://code.visualstudio.com/'>VS Code</a>, you should see a set of Flutter-specific entries in the status bar, including a <a href='https://docs.flutter.dev/get-started/install'>Flutter SDK</a> version and a device name (or a message displaying No Devices). The Flutter extension automatically selects the latest device connected. However, if you have multiple devices/simulators connected, click device in the status bar to see a pick-list at the top of the screen. Select the device you want to use for running or debugging & then run the command.</p>
+<p align='justify'>To run the application, start debugging by clicking <B>Run > Start Debugging</B> from the main IDE window (or press F5). If you are using <a href='https://code.visualstudio.com/'>VS Code</a>, you should see a set of Flutter-specific entries in the status bar, including a <a href='https://docs.flutter.dev/get-started/install'>Flutter SDK</a> version and a device name (or a message displaying No Devices). The Flutter extension automatically selects the latest device connected. However, if you have multiple devices/simulators connected, click device in the status bar to see a pick-list at the top of the screen. Select the device you want to use for running/debugging & then run the command</p>
 
 # CroMa - Under the Hood
 
