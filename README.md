@@ -1,9 +1,9 @@
-![CroMa Readme Banner](https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/blob/main/assets/CroMa_Banner_Light.png#gh-light-mode-only)
-![CroMa Readme Banner](https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/blob/main/assets/CroMa_Banner_Dark.png#gh-dark-mode-only)
+![CroMa Readme Banner](https://github.com/thisisashwinraj/croma-intelligent-crowd-management/blob/main/assets/CroMa_Banner_Light.png#gh-light-mode-only)
+![CroMa Readme Banner](https://github.com/thisisashwinraj/croma-intelligent-crowd-management/blob/main/assets/CroMa_Banner_Dark.png#gh-dark-mode-only)
 
 <p align='justify'>CroMa is an android application that uses a python backend hardware, built on raspberry pi integrated with a firebase real-time database and flutter framework for efficient crowd management in public transports such as buses & taxies. The hardware is effectively a handheld ticketing machine used for printing tickets, and collecting selective information about passengers. After data processing, the mobile application displays the output to the users. No Login is required</p>
 
-The project development started in April 2022 as a group project and has been licensed under the [Creative Commons Attribution - Non Commercial - No Derivs License](https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/blob/main/LICENSE) (CC-BY-NC-ND). The passenger data collected, is maintained as per the Privacy Policy. The pull requests are maintained by a team of [contributors](https://github.com/thisisashwinraj/CroMa-Crowd-Management-System#all-contributors). Learn more about CroMa software [here](https://github.com/thisisashwinraj/CroMa-Crowd-Management-System#user-installation-and-working)
+The project development started in April 2022 as a group project and has been licensed under the [Creative Commons Attribution - Non Commercial - No Derivs License](https://github.com/thisisashwinraj/croma-intelligent-crowd-management/blob/main/LICENSE) (CC-BY-NC-ND). The passenger data collected, is maintained as per the Privacy Policy. The pull requests are maintained by a team of [contributors](https://github.com/thisisashwinraj/croma-intelligent-crowd-management#all-contributors). Learn more about CroMa software [here](https://github.com/thisisashwinraj/croma-intelligent-crowd-management#user-installation-and-working)
 
 # SubDirectories and Constraints
 ### Software Dependencies
@@ -17,18 +17,18 @@ The project development started in April 2022 as a group project and has been li
 • **Ticketing Machine:** This directory contains the Python3 code for designing the hand-held ticketing machine, and DB
 
 <p align = "justify">
-All relevant updates, and stable versions are made available in the <a href="https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/tree/main/template_files/stable_versions">~/stableVersion</a> sub-directory. Some subdirectories may be sensitive for the project and may trigger review requests, when pull requests touch these files. Github handles with commit rights made available in the <a href="https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/blob/main/template_files/CODEOWNERS">~/Template Files/CODEOWNERS</a> are responsible for reviewing such changes
+All relevant updates, and stable versions are made available in the <a href="https://github.com/thisisashwinraj/croma-intelligent-crowd-management/tree/main/template_files/stable_versions">~/stableVersion</a> sub-directory. Some subdirectories may be sensitive for the project and may trigger review requests, when pull requests touch these files. Github handles with commit rights made available in the <a href="https://github.com/thisisashwinraj/croma-intelligent-crowd-management/blob/main/template_files/CODEOWNERS">~/Template Files/CODEOWNERS</a> are responsible for reviewing such changes
 </p>
 
 # User Installation and Working
 <p align = "justify">
-CroMa is a firmware solution that provides commuters with real-time information about public transits(such as buses) including real-time tracking, estimated time-of-arrival and the seat occupancy. This solution is an interworking of two major components: a <a href="https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/tree/main/hardware_files">handheld ticketing machine</a>, and a <a href="https://github.com/thisisashwinraj/CroMa-Crowd-Management-System/tree/main/android">mobile application</a>. CroMa v1.0 offers support for only buses
+CroMa is a firmware solution that provides commuters with real-time information about public transits(such as buses) including real-time tracking, estimated time-of-arrival and the seat occupancy. This solution is an interworking of two major components: a <a href="https://github.com/thisisashwinraj/croma-intelligent-crowd-management/tree/main/hardware_files">handheld ticketing machine</a>, and a <a href="https://github.com/thisisashwinraj/croma-intelligent-crowd-management/tree/main/android">mobile application</a>. CroMa v1.0 offers support for only buses
 </p>
 <p align = "justify">
 The hand-held ticketing machine is a micro-controller-based system used for generating billing tickets and collecting, saving, and generating daily reports and summaries. Our version of the hardware is additionally equipped with a GPS module for tracking the location of the bus. The device is to be used by conductors, and/or clippies for issuing tickets to the passengers. When new passengers board this bus, their details such as their start location, total luggage in the bus, their intended destination, & the total number of passengers is collected for issuing the tickets. These details are collected, processed and transmitted to the <a herf="https://firebase.google.com/products/realtime-database">FireBase RT database</a> by the hand-held ticketing machine. For passengers using a monthly, or yearly bus pass, a QR code or a unique alpha-numerical code may be used to update the software
 </p>
 
-![CroMa App](https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware/blob/main/assets/CroMaAppUI.png)
+![CroMa App](https://github.com/thisisashwinraj/croma-intelligent-crowd-management/blob/main/assets/CroMaAppUI.png)
 
 <p align = "justify">
 The passengers data is maintained in the FireBase Real-Time database for synchronizing this data across devices. This data is structured as a JSON tree with the data points stored as JSON objects. The parent nodes represents the Bus Id (unique to each bus) and the real-time data associated with the bus (including available seats, & current location, etc) are maintained as nested nodes. Whenever a new ticket is issued the database is updated. The algorithm ensures that the database is updated when passengers de-board the bus. The data maintained in this <a href="https://firebase.google.com/products/realtime-database">FireBase RT database</a> is then made available to be fetched by the android mobile application, and the relevant machine learning models, and API's.
@@ -43,7 +43,7 @@ To run the ticketing machine's sofware on a local computer, open the terminal, i
 python hardware/ticketingMachine.py
 ```
 
-CroMas development take place on [GitHub](https://github.com/thisisashwinraj/CroMa-Crowd-Management-System). Please submit any bug that you may encounter to the issue tracker with a reproducible example demonstrating the problem, in accordance with the issue template, present in contributing files
+CroMas development take place on [GitHub](https://github.com/thisisashwinraj/croma-intelligent-crowd-management). Please submit any bug that you may encounter to the issue tracker with a reproducible example demonstrating the problem, in accordance with the issue template, present in contributing files
 
 ```
 ├── .github
@@ -91,14 +91,14 @@ CroMas development take place on [GitHub](https://github.com/thisisashwinraj/Cro
 # Contribution Guidelines
 To start contributing to the project, clone the repository into your local system subdirectory using the below git code:
 ```
-git clone https://github.com/thisisashwinraj/CroMa-Crowd-Management-System.git
+git clone https://github.com/thisisashwinraj/croma-intelligent-crowd-management.git
 ```
 Before cloning the repository, make sure to navigate to the working subdirectory of your command line interface and ensure that no folder with same name exists. Other ways to clone the repository includes using a password protected [SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), or by using [Git CLI](https://cli.github.com/). The changes may additionally be performed by opening this repo using [GitHub Desktop](https://desktop.github.com/)
 
 ### Edit the Source Code and Make Desired Changes
 <p align="justify">To be able to make changes to the source, you may need to install and use a python IDE such as <a href="https://www.jetbrains.com/pycharm/download/">PyCharm</a>, Microsoft <a href="https://code.visualstudio.com/">VisualStudio</a>, and/or any other python interpreter. You will also require a Jupyter notebook  for working with the code snippets. To work with the Flutter application, you shall have <a href="https://docs.flutter.dev/get-started/install">Flutter SDK</a> installed on your local computer, and a USB cable. Ensure that you are strictly following the PEP-8 programming standards, while introducing the desired updates.</p>
 
-Before opening a Pull Request, it is recommended to have a look at the full contributing page to make sure your code complies with all the pull request guidelines. Please ensure that you satisfy the [~/Checklist](https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware/tree/main/Template%20Files/PULL_REQUEST_TEMPLATE) before submitting your PR.
+Before opening a Pull Request, it is recommended to have a look at the full contributing page to make sure your code complies with all the pull request guidelines. Please ensure that you satisfy the [~/Checklist](https://github.com/thisisashwinraj/croma-intelligent-crowd-management/tree/main/Template%20Files/PULL_REQUEST_TEMPLATE) before submitting your PR.
 
 Navigate to this subdirectory, & check status of all files that were altered (red) by running the below code in Git Bash:
 ```
@@ -128,7 +128,7 @@ Safegaurding your data starts with understanding how CroMa collects, and process
 The Firebase database are secured by means of firebase rules. The Firebase rules ensure that only authenticated users are allowed to manipulate the data. This includes real time passenger data collected by a given bus during its journey
 
 # License and Project Status
-CroMa & all its resources are distributed under [Creative Commons Attribution - Non Commercial - No Derivs License](https://github.com/thisisashwinraj/CroMa-CrowdManagementSoftware/blob/main/LICENSE). The app is compatible with all operating systems. The latest released stable version of CroMa is v1.0.1, and is available to be used on all local system for general use through the mobile app. All releases are logged in the [~/StableVersions]()
+CroMa & all its resources are distributed under [Creative Commons Attribution - Non Commercial - No Derivs License](https://github.com/thisisashwinraj/croma-intelligent-crowd-management/blob/main/LICENSE). The app is compatible with all operating systems. The latest released stable version of CroMa is v1.0.1, and is available to be used on all local system for general use through the mobile app. All releases are logged in the [~/StableVersions]()
 
 Upcoming updates will include new features, optimized recommendations using AI/ML and support for other transits
 <br>
